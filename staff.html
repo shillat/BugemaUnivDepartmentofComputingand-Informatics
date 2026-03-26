@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Profiles | Bugema University - Dept of Computing & Informatics</title>
+    <meta name="description"
+        content="Meet the academic staff of the Department of Computing & Informatics at Bugema University. View qualifications, research interests, and contact details.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 120px;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(26, 58, 138, 0.05);
+            border-top: 4px solid var(--bu-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            opacity: 1 !important;
+            transform: none !important;
+            z-index: 10;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 12px 30px rgba(26, 58, 138, 0.12);
+        }
+
+        .staff-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .staff-img,
+        .staff-placeholder-img {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            border: 3px solid var(--light-blue);
+        }
+
+        .staff-img {
+            object-fit: cover;
+        }
+
+        .staff-placeholder-img {
+            background: #f1f5f9;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .staff-info h3 {
+            margin: 0;
+            color: var(--bu-blue);
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .staff-info p {
+            margin: 5px 0 0;
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .staff-details p {
+            margin: 8px 0;
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .staff-details strong {
+            color: var(--bu-blue);
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .staff-contact {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #eee;
+            font-size: 0.85rem;
+            word-break: break-all;
+        }
+
+        .staff-contact a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logoBU.jpg" alt="Bugema University Logo">
+                <div class="logo-text">
+                    <h1>Bugema University</h1>
+                    <p>Excellence In Service</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="registrationForm.html">Register</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">More <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="department.html">Departments</a>
+                        <a href="staff.html">Staff Profile</a>
+                        <a href="research.html">Research</a>
+                        <a href="news.html">News & Events</a>
+                        <a href="list.html">Online Portal</a>
+                        <a href="alumni.html">Alumni</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-ticker">
+        <div class="ticker-label">Breaking Updates</div>
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now
+                    officially OPEN!</span>
+                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now
+                    fully Operational.</span>
+                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for
+                    the 2026 Dean's List!</span>
+                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud
+                    Computing" - Friday 10:00 AM.</span>
+                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation
+                    for the 2026 Region Awards.</span>
+            </div>
+        </div>
+    </div>
+    <header class="page-hero">
+        <h1>Staff Profiles</h1>
+        <p>Our dedicated faculty members bring expertise, passion, and real-world experience to the classroom.</p>
+    </header>
+
+    <div class="container">
+        <div class="staff-grid">
+            <!-- Lecturer 1: HOD -->
+            <div class="staff-card">
+                <div class="staff-header">
+                    <img src="hod.png" alt="Mr. Ssewankambo Erma" class="staff-img"
+                        style="border-color: var(--bu-blue);">
+                    <div class="staff-info">
+                        <h3>Mr. Ssewankambo Erma</h3>
+                        <p>Head of Department</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> MSc Computer Science, BSc IT</p>
+                    <p><strong>Research Area</strong> Cybersecurity, IT Governance</p>
+                    <p><strong>Recent Work</strong> <em>Enhancing Network Security (2025)</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="mailto:essewankambo@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                        essewankambo@bugemauniv.ac.ug</a>
+                </div>
+            </div>
+
+            <!-- Lecturer 2: Ssali Robert Balagade -->
+            <div class="staff-card" style="border-top-color: var(--accent-blue);">
+                <div class="staff-header">
+                    <img src="ssali robert balagade.png" alt="Mr. Ssali Robert Balagade" class="staff-img"
+                        style="border-color: var(--accent-blue);">
+                    <div class="staff-info">
+                        <h3>Mr. Ssali Robert Balagade</h3>
+                        <p>Senior Lecturer</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> MSc Information Systems</p>
+                    <p><strong>Research Area</strong> Database Management, Big Data</p>
+                    <p><strong>Recent Work</strong> <em>Optimizing Data Queries in Distributed Systems</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="mailto:rssali@bugemauniv.ac.ug"><i class="fas fa-envelope"></i> rssali@bugemauniv.ac.ug</a>
+                </div>
+            </div>
+
+            <!-- Lecturer 3: Nalwoga Grace -->
+            <div class="staff-card" style="border-top-color: var(--bu-blue-light);">
+                <div class="staff-header">
+                    <img src="nalwoga grace.png" alt="Ms. Nalwoga Grace" class="staff-img"
+                        style="border-color: var(--bu-blue-light);">
+                    <div class="staff-info">
+                        <h3>Ms. Nalwoga Grace</h3>
+                        <p>Assistant Lecturer</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> MSc Computer Science</p>
+                    <p><strong>Research Area</strong> Software Engineering, UI/UX Design</p>
+                    <p><strong>Recent Work</strong> <em>Aesthetical Design in Academic Portals</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="mailto:gnalwoga@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                        gnalwoga@bugemauniv.ac.ug</a>
+                </div>
+            </div>
+
+            <!-- Lecturer 4: Albert Walusimbi -->
+            <div class="staff-card" style="border-top-color: #f59e0b;">
+                <div class="staff-header">
+                    <img src="albert walusimbi.png" alt="Mr. Albert Walusimbi" class="staff-img"
+                        style="border-color: #f59e0b;">
+                    <div class="staff-info">
+                        <h3>Mr. Albert Walusimbi</h3>
+                        <p>Lecturer</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> MSc Information Technology</p>
+                    <p><strong>Research Area</strong> Network Infrastructure, Cloud Computing</p>
+                    <p><strong>Recent Work</strong> <em>Cloud Adoption in Higher Education</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="mailto:awalusimbi@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                        awalusimbi@bugemauniv.ac.ug</a>
+                </div>
+            </div>
+
+            <!-- Lecturer 5: Nandere Hudson Lubinga -->
+            <div class="staff-card" style="border-top-color: #10b981;">
+                <div class="staff-header">
+                    <img src="nandere hudson lubinga.png" alt="Mr. Nandere Hudson Lubinga" class="staff-img"
+                        style="border-color: #10b981;">
+                    <div class="staff-info">
+                        <h3>Mr. Nandere Hudson Lubinga</h3>
+                        <p>Assistant Lecturer</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> BSc Computer Science, CCNA</p>
+                    <p><strong>Research Area</strong> Networking, System Administration</p>
+                    <p><strong>Recent Work</strong> <em>Scalable Networks for Remote Campuses</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="mailto:hlubinga@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                        hlubinga@bugemauniv.ac.ug</a>
+                </div>
+            </div>
+
+            <!-- Placeholder Cards -->
+            <div class="staff-card placeholder" style="border-top-color: #e2e8f0;">
+                <div class="staff-header">
+                    <div class="staff-placeholder-img"><i class="fas fa-user-plus"></i></div>
+                    <div class="staff-info">
+                        <h3>[Lecturer Name]</h3>
+                        <p>[Academic Title]</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> [Credentials]</p>
+                    <p><strong>Research Area</strong> [Interests]</p>
+                    <p><strong>Recent Work</strong> <em>[Publication Content]</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="#" style="opacity: 0.5;"><i class="fas fa-envelope"></i> [contact@bugemauniv.ac.ug]</a>
+                </div>
+            </div>
+
+            <div class="staff-card placeholder" style="border-top-color: #e2e8f0;">
+                <div class="staff-header">
+                    <div class="staff-placeholder-img"><i class="fas fa-user-plus"></i></div>
+                    <div class="staff-info">
+                        <h3>[Lecturer Name]</h3>
+                        <p>[Academic Title]</p>
+                    </div>
+                </div>
+                <div class="staff-details">
+                    <p><strong>Qualifications</strong> [Credentials]</p>
+                    <p><strong>Research Area</strong> [Interests]</p>
+                    <p><strong>Recent Work</strong> <em>[Publication Content]</em></p>
+                </div>
+                <div class="staff-contact">
+                    <a href="#" style="opacity: 0.5;"><i class="fas fa-envelope"></i> [contact@bugemauniv.ac.ug]</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="official-link">
+            <i class="fas fa-external-link-alt"
+                style="font-size: 1.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
+            <br>
+            <a href="contact.html">
+                For more information, contact us
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand" style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA
+                        </h3>
+                        <p
+                            style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">
+                            University</p>
+                    </div>
+                </div>
+                <p style="font-size: 0.92rem; line-height: 1.8; opacity: 0.6; margin-bottom: 20px;">
+                    Excellence in Service. Empowering the next generation of tech leaders through quality computing
+                    education and Christian values.
+                </p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="about.html">About the Dept</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li><a href="registrationForm.html">Register Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Help Center</h4>
+                <ul class="footer-links">
+                    <li><a href="admissions.html">How to Register</a></li>
+                    <li><a href="list.html">Student Help Desk</a></li>
+                    <li><a href="feedback.html">Submit Feedback</a></li>
+                    <li><a href="research.html">FAQs & Research</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Stay Connected</h4>
+                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/256777567890" target="_blank" class="social-icon whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
+                    channels for real-time updates on campus events and IT workshops.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bugema University - Dept of Computing & Informatics. All Rights Reserved.</p>
+            <div style="display: flex; gap: 25px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

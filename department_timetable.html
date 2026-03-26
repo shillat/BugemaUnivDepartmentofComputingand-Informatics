@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Timetable | Bugema University - Dept of Computing & Informatics</title>
+    <meta name="description" content="Weekly lecture timetable for the Department of Computing & Informatics at Bugema University.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .timetable-card {
+            max-width: 950px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(26, 58, 138, 0.1);
+        }
+
+        .timetable-card h1 {
+            color: var(--bu-blue);
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .sub-title {
+            text-align: center;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--bu-blue), var(--bu-blue-light));
+            color: white;
+            padding: 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border: 1px solid var(--bu-blue-dark);
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #eee;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        tr:hover td {
+            background-color: var(--light-blue);
+            color: var(--bu-blue);
+            font-weight: 500;
+        }
+
+        .sabbath-note {
+            color: var(--bu-blue);
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .group-box {
+            background: var(--light-blue);
+            padding: 20px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .timetable-card {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 0.8rem;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logoBU.jpg" alt="Bugema University Logo">
+                <div class="logo-text">
+                    <h1>Bugema University</h1>
+                    <p>Excellence In Service</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="registrationForm.html">Register</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">More <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="department.html">Departments</a>
+                        <a href="staff.html">Staff Profile</a>
+                        <a href="research.html">Research</a>
+                        <a href="news.html">News & Events</a>
+                        <a href="list.html">Online Portal</a>
+                        <a href="alumni.html">Alumni</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <div class="news-ticker">
+        <div class="ticker-label">Breaking Updates</div>
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now officially OPEN!</span>
+                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now fully Operational.</span>
+                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for the 2026 Dean's List!</span>
+                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud Computing" - Friday 10:00 AM.</span>
+                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation for the 2026 Region Awards.</span>
+            </div>
+        </div>
+    </div>
+<header class="page-hero">
+        <h1>Department Timetable</h1>
+        <p>Weekly lecture schedule for the 2026 academic year</p>
+    </header>
+
+    <div class="timetable-card">
+        <h1>Department of Computing and Informatics</h1>
+        <div class="sub-title">Weekly Lecture Timetable | 2026 Academic Year</div>
+
+        <hr>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>08:00 - 10:00</th>
+                    <th>10:00 - 12:00</th>
+                    <th>14:00 - 16:00</th>
+                    <th>16:00 - 18:00</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Monday</strong></td>
+                    <td>Web Design</td>
+                    <td>Mathematics</td>
+                    <td>Database Systems</td>
+                    <td>Study Time</td>
+                </tr>
+                <tr>
+                    <td><strong>Tuesday</strong></td>
+                    <td>Programming</td>
+                    <td>Computer Networks</td>
+                    <td>Web Development</td>
+                    <td>Library</td>
+                </tr>
+                <tr>
+                    <td><strong>Wednesday</strong></td>
+                    <td>Software Engineering</td>
+                    <td>Database Systems</td>
+                    <td>Programming Lab</td>
+                    <td>Group Discussion</td>
+                </tr>
+                <tr>
+                    <td><strong>Thursday</strong></td>
+                    <td>Operating Systems</td>
+                    <td>Web Design</td>
+                    <td>Project Work</td>
+                    <td>Research</td>
+                </tr>
+                <tr>
+                    <td><strong>Friday</strong></td>
+                    <td>Computer Networks</td>
+                    <td>Programming</td>
+                    <td>Seminar</td>
+                    <td class="sabbath-note">Sabbath Begins</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <div class="group-box">
+            <div>
+                <h3 style="margin:0; color:var(--bu-blue);"><i class="fas fa-calendar-alt" style="margin-right:10px;"></i>Academic Timetable Update</h3>
+                <p style="margin:5px 0 0; font-size:0.85rem;">Updated with standard lecture and lab schedules for the computing cohort.</p>
+            </div>
+            <div style="text-align:right;">
+                <span style="background:var(--bu-blue-light); color:white; padding:6px 14px; border-radius:20px; font-size:0.75rem; font-weight:bold;">LATEST SCHEDULE</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand" style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA</h3>
+                        <p style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">University</p>
+                    </div>
+                </div>
+                <p style="font-size: 0.92rem; line-height: 1.8; opacity: 0.6; margin-bottom: 20px;">
+                    Excellence in Service. Empowering the next generation of tech leaders through quality computing education and Christian values.
+                </p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="about.html">About the Dept</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li><a href="registrationForm.html">Register Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Help Center</h4>
+                <ul class="footer-links">
+                    <li><a href="admissions.html">How to Register</a></li>
+                    <li><a href="list.html">Student Help Desk</a></li>
+                    <li><a href="feedback.html">Submit Feedback</a></li>
+                    <li><a href="research.html">FAQs & Research</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Stay Connected</h4>
+                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/256777567890" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official channels for real-time updates on campus events and IT workshops.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bugema University - Dept of Computing & Informatics. All Rights Reserved.</p>
+            <div style="display: flex; gap: 25px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

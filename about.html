@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Bugema University - Department of Computing & Informatics</title>
+    <meta name="description"
+        content="Learn about the Department of Computing & Informatics at Bugema University - our heritage, vision, mission, and core values.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(26, 58, 138, 0.1);
+        }
+
+        .content-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(26, 58, 138, 0.15);
+            border: 5px solid #f8f9fa;
+        }
+
+        .values-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav aria-label="Main navigation">
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logoBU.jpg" alt="Bugema University Logo">
+                <div class="logo-text">
+                    <h1>Bugema University</h1>
+                    <p>Excellence In Service</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="registrationForm.html">Register</a>
+                <a href="contact.html">Contact</a>
+                <div class="dropdown">
+                    <button class="dropdown-btn">More <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="department.html">Departments</a>
+                        <a href="staff.html">Staff Profile</a>
+                        <a href="research.html">Research</a>
+                        <a href="news.html">News & Events</a>
+                        <a href="list.html">Online Portal</a>
+                        <a href="alumni.html">Alumni</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="news-ticker">
+        <div class="ticker-label">Breaking Updates</div>
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now
+                    officially OPEN!</span>
+                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now
+                    fully Operational.</span>
+                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for
+                    the 2026 Dean's List!</span>
+                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud
+                    Computing" - Friday 10:00 AM.</span>
+                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation
+                    for the 2026 Region Awards.</span>
+            </div>
+        </div>
+    </div>
+    <header class="page-hero">
+        <h1>About Our Department</h1>
+        <p>Advancing the frontiers of technology through excellence in teaching, research, and service since the
+            department's inception.</p>
+    </header>
+
+    <div class="container">
+        <section class="content-grid">
+            <div class="content-text">
+                <h2 style="color: var(--bu-blue); font-size: 2rem; font-weight: 800;">Our Heritage & Purpose</h2>
+                <p>The Department of Computing & Informatics at Bugema University stands as a pillar of technological
+                    advancement in the region. We are dedicated to providing a transformative educational experience
+                    that goes beyond the classroom.</p>
+                <p>We recognize that the digital landscape is constantly shifting. Therefore, our curriculum is
+                    intentionally dynamic, integrating the latest industry trends with a solid foundation in
+                    computational theory.</p>
+            </div>
+            <div class="content-image">
+                <img src="img.png" alt="ICT Center">
+            </div>
+        </section>
+
+        <section class="content-grid" style="margin-bottom: 60px;">
+            <div style="text-align: center;">
+                <div
+                    style="width: 220px; height: 220px; border-radius: 50%; border: 5px solid var(--bu-blue); margin: 0 auto 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(26, 58, 138, 0.2);">
+                    <img src="hod.png" alt="Head of Department" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 style="color: var(--bu-blue); margin: 0; font-size: 1.3rem;">Mr. Ssewankambo Erma</h3>
+                <p style="margin: 5px 0 0; color: #64748b; font-weight: bold;">Head of Department</p>
+            </div>
+            <div class="content-text">
+                <h2 style="color: var(--bu-blue); font-size: 2rem; font-weight: 800; margin-top: 0;">Message from the
+                    HOD</h2>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #444; font-style: italic;">
+                    "It is my distinct pleasure to welcome you to the Department of Computing & Informatics. We are
+                    exceptionally proud to cultivate a culture of innovation, rigorous technical inquiry, and practical
+                    skill-building."
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #444;">
+                    Our commitment is to graduate highly proficient professionals who are equipped to solve complex
+                    technological challenges. By upholding Christian values alongside academic excellence, we ensure
+                    that you are prepared not just for the dynamic IT industry, but for a lifetime of principled
+                    leadership.
+                </p>
+                <a href="staff.html"
+                    style="color: var(--bu-blue); font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px;">Meet
+                    Our Faculty <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h2 style="color: var(--bu-blue); font-size: 2.2rem; margin-bottom: 40px; font-weight: 800;">What We Stand
+                For</h2>
+            <div class="values-section">
+                <div class="value-card">
+                    <h3>Our Vision</h3>
+                    <p>To be a premier center of excellence in computing education and research, producing globally
+                        competitive professionals.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Our Mission</h3>
+                    <p>To provide high-quality training in informatics through hands-on practice, innovation, and
+                        Christian values.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Core Values</h3>
+                    <p>Innovation, Integrity, Excellence in Service, and Christ-centered professionalism in every line
+                        of code.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="official-link">
+            <i class="fas fa-external-link-alt"
+                style="font-size: 1.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
+            <br>
+            <a href="contact.html">
+                For more information, contact us
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand" style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA
+                        </h3>
+                        <p
+                            style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">
+                            University</p>
+                    </div>
+                </div>
+                <p style="font-size: 0.92rem; line-height: 1.8; opacity: 0.6; margin-bottom: 20px;">
+                    Excellence in Service. Empowering the next generation of tech leaders through quality computing
+                    education and Christian values.
+                </p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home Page</a></li>
+                    <li><a href="about.html">About the Dept</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact & Support</a></li>
+                    <li><a href="registrationForm.html">Register Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Help Center</h4>
+                <ul class="footer-links">
+                    <li><a href="admissions.html">How to Register</a></li>
+                    <li><a href="list.html">Student Help Desk</a></li>
+                    <li><a href="feedback.html">Submit Feedback</a></li>
+                    <li><a href="research.html">FAQs & Research</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Stay Connected</h4>
+                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/256777567890" target="_blank" class="social-icon whatsapp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
+                    channels for real-time
+                    updates on campus events and IT workshops.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bugema University - Dept of Computing & Informatics. All Rights Reserved.</p>
+            <div style="display: flex; gap: 25px;">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
