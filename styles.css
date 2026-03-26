@@ -7,7 +7,8 @@
     --bu-blue: #1a3a8a;
     --bu-blue-light: #3b82f6;
     --bu-dark: #0f172a;
-    --bu-accent: var(--bu-blue); /* Removed Gold, using Primary Blue */
+    --bu-accent: var(--bu-blue);
+    /* Removed Gold, using Primary Blue */
     --bu-accent-soft: rgba(59, 130, 246, 0.1);
     --bu-blue-dark: #0f2458;
     --navbar-scroll: #0e2d6e;
@@ -22,7 +23,8 @@
 }
 
 [data-theme='dark'] {
-    --bu-blue: #3b82f6; /* Brighter blue for dark mode */
+    --bu-blue: #3b82f6;
+    /* Brighter blue for dark mode */
     --bu-dark: #f8fafc;
     --bu-blue-dark: #020617;
     --text-default: #f1f5f9;
@@ -32,12 +34,13 @@
     --card-bg: #0f172a;
     --border-color: #334155;
     --shadow-blue: rgba(0, 0, 0, 0.4);
-    --nav-text: #60a5fa; /* Vibrant blue for dark-mode navigation */
+    --nav-text: #60a5fa;
+    /* Vibrant blue for dark-mode navigation */
 }
 
-[data-theme='dark'] .nav-links a, 
-[data-theme='dark'] .dropdown-btn, 
-[data-theme='dark'] .logo-text h1, 
+[data-theme='dark'] .nav-links a,
+[data-theme='dark'] .dropdown-btn,
+[data-theme='dark'] .logo-text h1,
 [data-theme='dark'] .logo-text p {
     color: var(--nav-text) !important;
 }
@@ -61,6 +64,7 @@
         opacity: 0;
         transform: translateY(25px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -72,6 +76,7 @@
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -83,10 +88,12 @@
         transform: scale(1);
         box-shadow: 0 4px 15px rgba(26, 58, 138, 0.3);
     }
+
     50% {
         transform: scale(1.08);
         box-shadow: 0 8px 25px rgba(26, 58, 138, 0.5);
     }
+
     100% {
         transform: scale(1);
         box-shadow: 0 4px 15px rgba(26, 58, 138, 0.3);
@@ -94,8 +101,13 @@
 }
 
 @keyframes shimmer {
-    0% { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 /* ===== GLOBAL RESET ===== */
@@ -120,7 +132,8 @@ body {
 .theme-toggle {
     position: fixed;
     right: 25px;
-    bottom: 60px; /* Above the news ticker */
+    bottom: 60px;
+    /* Above the news ticker */
     width: 50px;
     height: 50px;
     background: var(--bu-blue);
@@ -131,7 +144,7 @@ body {
     justify-content: center;
     cursor: pointer;
     z-index: 3000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border: 2px solid white;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -140,7 +153,11 @@ body {
     transform: scale(1.1) rotate(15deg);
 }
 
-.value-card, .portal-card, .contact-info, .contact-form, .registration-card {
+.value-card,
+.portal-card,
+.contact-info,
+.contact-form,
+.registration-card {
     background: var(--card-bg) !important;
     border-color: var(--border-color) !important;
     color: var(--text-default) !important;
@@ -242,7 +259,8 @@ nav.scrolled {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #0f172a !important; /* Force Dark Navy for both themes for visibility */
+    background: #0f172a !important;
+    /* Force Dark Navy for both themes for visibility */
     color: white !important;
     height: 40px;
     display: flex;
@@ -253,13 +271,14 @@ nav.scrolled {
     font-weight: 700;
     letter-spacing: 0.5px;
     border-top: 3px solid var(--bu-blue-light);
-    box-shadow: 0 -5px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.3);
 }
 
 .theme-toggle {
     position: fixed;
     right: 20px;
-    top: 45%; /* Vertically Aligned Stack */
+    top: 45%;
+    /* Vertically Aligned Stack */
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -271,7 +290,7 @@ nav.scrolled {
     justify-content: center;
     cursor: pointer;
     z-index: 3000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border: 2px solid white;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -279,7 +298,8 @@ nav.scrolled {
 .scroll-top-btn {
     position: fixed;
     right: 20px;
-    top: calc(45% + 65px); /* Perfectly aligned below toggle */
+    top: calc(45% + 65px);
+    /* Perfectly aligned below toggle */
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -292,10 +312,11 @@ nav.scrolled {
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.theme-toggle:hover, .scroll-top-btn:hover {
+.theme-toggle:hover,
+.scroll-top-btn:hover {
     transform: translateY(-50%) scale(1.1);
     background: var(--bu-blue-light);
 }
@@ -316,7 +337,7 @@ nav.scrolled {
     text-transform: uppercase;
     z-index: 2;
     position: relative;
-    box-shadow: 10px 0 20px rgba(0,0,0,0.5);
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .ticker-wrap {
@@ -343,21 +364,35 @@ nav.scrolled {
 }
 
 @keyframes tickerLoop {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-4000px); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-4000px);
+    }
 }
 
 /* Resetting Header Spacing to Standard */
-.home-hero, .page-hero {
+.home-hero,
+.page-hero {
     padding-top: 160px !important;
 }
 
 /* PREMIUM GHOST HOVER EFFECTS */
-.value-card, .portal-card, .info-card, .content-card, .staff-card {
+.value-card,
+.portal-card,
+.info-card,
+.content-card,
+.staff-card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
-.value-card:hover, .portal-card:hover, .info-card:hover, .content-card:hover, .staff-card:hover {
+.value-card:hover,
+.portal-card:hover,
+.info-card:hover,
+.content-card:hover,
+.staff-card:hover {
     transform: translateY(-10px) scale(1.02) !important;
     box-shadow: 0 20px 40px rgba(26, 58, 138, 0.18), 0 0 15px var(--bu-accent-soft) !important;
     border-top-color: var(--bu-accent) !important;
@@ -405,7 +440,8 @@ nav.scrolled .dropdown-btn {
 }
 
 .logo-container img {
-    width: 92px; /* Large for Lecturer Visibility */
+    width: 92px;
+    /* Large for Lecturer Visibility */
     height: 92px;
     object-fit: contain;
     background: var(--white);
@@ -627,7 +663,8 @@ nav.scrolled .dropdown-btn {
 
 /* ===== PAGE HERO SECTIONS ===== */
 .home-hero {
-    min-height: 100vh; /* Full screen view */
+    min-height: 100vh;
+    /* Full screen view */
     padding: 220px 6% 120px;
     background: linear-gradient(rgba(15, 36, 88, 0.8), rgba(15, 36, 88, 0.7)), url('hero-bg.jpg');
     background-size: cover;
@@ -642,11 +679,12 @@ nav.scrolled .dropdown-btn {
 }
 
 .hero-content h1 {
-    font-size: 4.5rem !important; /* Massive Headline */
+    font-size: 4.5rem !important;
+    /* Massive Headline */
     font-weight: 900;
     margin-bottom: 30px;
     line-height: 1.1;
-    text-shadow: 0 5px 25px rgba(0,0,0,0.4);
+    text-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content p {
@@ -758,7 +796,8 @@ nav.scrolled .dropdown-btn {
 }
 
 /* ===== CONTENT CARDS ===== */
-.content-card, .info-card {
+.content-card,
+.info-card {
     background: var(--white);
     padding: 40px;
     border-radius: 18px;
@@ -773,7 +812,8 @@ nav.scrolled .dropdown-btn {
     position: relative;
 }
 
-.content-card:hover, .info-card:hover {
+.content-card:hover,
+.info-card:hover {
     transform: translateY(-4px) !important;
     box-shadow: 0 15px 45px rgba(26, 58, 138, 0.16);
 }
@@ -945,11 +985,25 @@ nav.scrolled .dropdown-btn {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.social-icon.facebook:hover { background: #1877f2; }
-.social-icon.twitter:hover { background: #1da1f2; }
-.social-icon.tiktok:hover { background: #010101; }
-.social-icon.email:hover { background: #ea4335; }
-.social-icon.whatsapp:hover { background: #25d366; }
+.social-icon.facebook:hover {
+    background: #1877f2;
+}
+
+.social-icon.twitter:hover {
+    background: #1da1f2;
+}
+
+.social-icon.tiktok:hover {
+    background: #010101;
+}
+
+.social-icon.email:hover {
+    background: #ea4335;
+}
+
+.social-icon.whatsapp:hover {
+    background: #25d366;
+}
 
 .footer-bottom {
     max-width: 1200px;
@@ -1057,7 +1111,10 @@ nav.scrolled .dropdown-btn {
 }
 
 /* ===== RESPONSIVE ===== */
+/* Tablet and Smaller Screens (768px and below) */
 @media (max-width: 768px) {
+
+    /* Navigation */
     nav {
         padding: 10px 15px;
         flex-wrap: wrap;
@@ -1070,8 +1127,19 @@ nav.scrolled .dropdown-btn {
         margin-bottom: 10px;
     }
 
+    .logo-container img {
+        width: 70px;
+        height: 70px;
+    }
+
     .logo-text h1 {
-        font-size: 1.05rem;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+
+    .logo-text p {
+        font-size: 0.75rem;
+        letter-spacing: 0;
     }
 
     .nav-links {
@@ -1097,15 +1165,440 @@ nav.scrolled .dropdown-btn {
         position: static;
     }
 
-    .page-hero h1 {
-        font-size: 2rem;
+    .register-btn {
+        padding: 10px 18px;
+        font-size: 0.75rem;
+    }
+
+    /* Hero Sections */
+    .home-hero {
+        min-height: auto;
+        padding: 100px 15px 60px;
+        background-attachment: scroll;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        padding: 14px 25px;
+        font-size: 0.95rem;
     }
 
     .page-hero {
-        padding: 120px 15px 60px;
+        padding: 100px 15px 50px;
     }
 
+    .page-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .page-hero p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Content Sections */
     .container {
+        max-width: 100%;
         padding: 0 15px;
+        margin: -40px auto 80px;
+    }
+
+    .university-card {
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .hod-body h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .dean-message {
+        font-size: 1rem;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    /* Cards */
+    .value-card,
+    .portal-card,
+    .content-card,
+    .info-card,
+    .feature-card {
+        padding: 25px 15px;
+        margin: 15px auto;
+    }
+
+    .value-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+
+    .value-card p {
+        font-size: 0.95rem;
+    }
+
+    /* University Section */
+    .university-section {
+        padding: 60px 15px;
+        margin-top: -30px;
+    }
+
+    /* News Ticker */
+    .news-ticker {
+        height: 35px;
+        font-size: 0.75rem;
+    }
+
+    .ticker-label {
+        padding: 0 12px;
+        font-size: 0.65rem;
+    }
+
+    .ticker-item {
+        padding: 0 30px;
+    }
+
+    /* Theme Toggle & Scroll Button */
+    .theme-toggle,
+    .scroll-top-btn {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+    }
+
+    .theme-toggle {
+        top: 50%;
+    }
+
+    .scroll-top-btn {
+        top: calc(50% + 55px);
+    }
+
+    /* Footer */
+    .footer-grid {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        padding: 40px 15px 20px;
+    }
+
+    /* Official Link Box */
+    .official-link {
+        padding: 20px 15px;
+    }
+
+    .official-link a {
+        font-size: 0.95rem;
+    }
+
+    /* Dropdown */
+    .dropdown-content {
+        min-width: 180px;
+        right: -10px;
+    }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 8px 10px;
+    }
+
+    .logo-container {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .logo-container img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text h1 {
+        font-size: 0.95rem;
+    }
+
+    .logo-text p {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links a,
+    .dropdown-btn {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
+
+    .nav-actions {
+        margin-top: 8px;
+        gap: 8px;
+    }
+
+    .register-btn {
+        padding: 8px 14px;
+        font-size: 0.65rem;
+        letter-spacing: 0;
+    }
+
+    /* Hero Section */
+    .home-hero {
+        min-height: auto;
+        padding: 80px 12px 40px;
+        background-attachment: scroll;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
+        text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        max-width: 100%;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        letter-spacing: 0.2px;
+    }
+
+    /* Page Hero */
+    .page-hero {
+        padding: 80px 12px 40px;
+    }
+
+    .page-hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .page-hero p {
+        font-size: 0.85rem;
+        max-width: 100%;
+        line-height: 1.5;
+    }
+
+    /* Container & Sections */
+    .container {
+        max-width: 100%;
+        padding: 0 12px;
+        margin: -30px auto 60px;
+    }
+
+    .university-section {
+        padding: 40px 12px;
+        margin-top: -20px;
+    }
+
+    .university-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .hod-body h2 {
+        font-size: 1.35rem;
+        padding-bottom: 12px;
+    }
+
+    .hod-body h2::after {
+        width: 70px;
+        height: 4px;
+    }
+
+    .dean-message {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .section-heading {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+    }
+
+    .section-heading::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    /* Cards */
+    .value-card,
+    .portal-card,
+    .content-card,
+    .info-card,
+    .feature-card {
+        padding: 18px 12px;
+        margin: 12px auto;
+        border-radius: 12px;
+    }
+
+    .value-card h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .value-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* News Ticker */
+    .news-ticker {
+        height: 30px;
+        font-size: 0.65rem;
+    }
+
+    .ticker-label {
+        padding: 0 10px;
+        font-size: 0.6rem;
+    }
+
+    .ticker-move {
+        animation: tickerLoop 60s linear infinite;
+    }
+
+    .ticker-item {
+        padding: 0 20px;
+    }
+
+    .ticker-item i {
+        margin-right: 8px;
+    }
+
+    /* Theme Toggle & Buttons */
+    .theme-toggle,
+    .scroll-top-btn {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle {
+        bottom: 50px;
+        top: auto;
+    }
+
+    .scroll-top-btn {
+        right: 10px;
+        top: auto;
+        bottom: 10px;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 30px 12px 15px;
+    }
+
+    .footer-grid {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand h3,
+    .footer-links h4 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-brand p,
+    .footer-links a,
+    .contact-info-footer {
+        font-size: 0.85rem;
+    }
+
+    /* Official Link */
+    .official-link {
+        padding: 15px 12px;
+        margin: 15px 0;
+    }
+
+    .official-link a {
+        font-size: 0.85rem;
+    }
+
+    /* Dropdown */
+    .dropdown-content {
+        min-width: 160px;
+        right: auto;
+        left: -50px;
+    }
+
+    /* Text Utilities */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    p,
+    a,
+    span,
+    li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }
