@@ -838,27 +838,7 @@ nav.scrolled .dropdown-btn {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
-    z-index: 1;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-}
 
-.page-hero h1,
-.page-hero p {
-    position: relative;
-    z-index: 5;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 15px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    animation: fadeInLeft 0.8s ease-out;
-}
-
-.page-hero p {
-    font-size: 1.25rem;
-    opacity: 0.95;
     max-width: 550px;
     font-weight: 400;
     line-height: 1.7;
