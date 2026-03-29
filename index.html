@@ -31,9 +31,9 @@
         .home-hero {
             margin-top: 0;
             position: relative;
-            min-height: 65vh;
+            min-height: 55vh;
             height: auto;
-            padding: 120px 20px 60px;
+            padding: 80px 20px 45px;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -50,22 +50,22 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 30px 20px 20px;
+            padding: 18px 20px 20px;
             animation: fadeInUp 1.2s ease-out forwards;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
+            margin-bottom: 16px;
             font-weight: 800;
-            letter-spacing: -1px;
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.8px;
+            text-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
         }
 
         .hero-content p {
-            max-width: 900px;
+            max-width: 700px;
             margin: auto;
-            font-size: 1.35rem;
+            font-size: clamp(1rem, 2.2vw, 1.15rem);
             color: rgba(240, 240, 240, 0.95);
             line-height: 1.7;
         }

@@ -707,13 +707,14 @@ nav.scrolled .dropdown-btn {
 
 /* ===== PAGE HERO SECTIONS ===== */
 .home-hero {
-    min-height: 60vh !important;
+    min-height: 55vh !important;
     height: auto !important;
-    padding: 100px 20px 60px !important;
-    /* Reduced hero height so the department label appears higher in the viewport */
-    background: url('image.png');
-    background-size: cover;
-    background-position: center;
+    padding: 80px 20px 50px !important;
+    background-color: #0f172a;
+    background-image: url('image.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: scroll;
     display: flex;
     align-items: flex-start;
@@ -753,18 +754,18 @@ nav.scrolled .dropdown-btn {
 }
 
 .hero-content h1 {
-    font-size: 4.5rem !important;
+    font-size: clamp(2.6rem, 5vw, 3.8rem) !important;
     font-weight: 900;
-    margin-bottom: 30px;
-    line-height: 1.1;
+    margin-bottom: 24px;
+    line-height: 1.05;
     text-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 .hero-content p {
-    font-size: 1.35rem !important;
-    max-width: 800px;
-    margin: 25px auto 45px;
+    font-size: clamp(1rem, 2.2vw, 1.2rem) !important;
+    max-width: 700px;
+    margin: 20px auto 35px;
     /* Centered with auto margin */
     line-height: 1.8;
     text-align: center;
@@ -822,15 +823,17 @@ nav.scrolled .dropdown-btn {
 
 .page-hero {
     margin-top: 0;
-    background: url('image.png');
-    background-size: cover;
-    background-position: center;
+    background-color: #0f172a;
+    background-image: url('image.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 160px 20px 80px;
+    padding: 100px 20px 60px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 65vh;
     align-items: center;
 }
 
