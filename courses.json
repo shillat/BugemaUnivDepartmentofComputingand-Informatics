@@ -1,7 +1,6 @@
 {
     "B.Sc. Software Engineering": {
         "Year 1, Sem I": [
-<<<<<<< HEAD
             {
                 "code": "BBCT 1111",
                 "name": "Fundamentals of Relational Database Systems",
@@ -37,22 +36,6 @@
                 "name": "Introduction to Writing Skills",
                 "credits": 3
             }
-=======
-            {"code": "BBCT 1111", "name": "Fundamentals of Relational Database Systems", "credits": 3},
-            {"code": "BBCT 1112", "name": "Fundamentals of Web Development", "credits": 3},
-            {"code": "BSCT 1111", "name": "Software Engineering Ethics", "credits": 3},
-            {"code": "BSCT 1121", "name": "Programming Concepts Using C", "credits": 3},
-            {"code": "GECC 1101", "name": "Fundamentals of Computers and Office Applications", "credits": 4},
-            {"code": "GECH 1101", "name": "Health Principles", "credits": 3},
-            {"code": "GECL 1101", "name": "Introduction to Writing Skills", "credits": 3}
-            
->>>>>>> 3e95eb98467638846b00be56edba23a5a4598c76
         ]
-       
     }
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> 3e95eb98467638846b00be56edba23a5a4598c76
