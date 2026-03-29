@@ -646,13 +646,13 @@ nav.scrolled .dropdown-btn {
     padding-left: 28px;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown.show .dropdown-content {
     display: block;
     animation: fadeIn 0.3s ease;
 }
 
-.dropdown.show .dropdown-content {
-    display: block;
+.dropdown.show .dropdown-btn i {
+    transform: rotate(180deg);
 }
 
 /* ===== REGISTER BUTTON ===== */
