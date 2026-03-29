@@ -834,20 +834,10 @@ nav.scrolled .dropdown-btn {
     position: relative;
     overflow: hidden;
     min-height: 65vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.page-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    /* Narrower wrapper */
-    height: 100%;
-    /* High transparency and reduced blue as requested */
-    background: linear-gradient(135deg, rgba(15, 36, 88, 0.25) 0%, rgba(44, 82, 177, 0.1) 100%);
-    /* Sharp Skinny Slant (approx 20% top width, 14% bottom width) */
+    flex-direction: column;
     clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
     z-index: 1;
     backdrop-filter: blur(1px);
@@ -858,12 +848,8 @@ nav.scrolled .dropdown-btn {
 .page-hero p {
     position: relative;
     z-index: 5;
-    text-align: left;
-    margin-left: 0;
-}
-
-.page-hero h1 {
-    font-size: 3.2rem;
+    text-align: center;
+    margin: 0 auto;
     margin-bottom: 15px;
     font-weight: 800;
     letter-spacing: -0.5px;
