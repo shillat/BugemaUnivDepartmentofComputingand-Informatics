@@ -1207,6 +1207,9 @@ nav.scrolled .dropdown-btn {
 
     /* Navigation */
     nav {
+        position: static;
+        background: transparent;
+        border-bottom: none;
         padding: 10px 15px;
         flex-wrap: wrap;
         justify-content: center;
