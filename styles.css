@@ -725,22 +725,7 @@ nav.scrolled .dropdown-btn {
     overflow: hidden;
 }
 
-.home-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35%;
-    /* Sharper wrapper */
-    height: 100%;
-    /* Keep it high transparency for image clarity */
-    background: linear-gradient(135deg, rgba(15, 36, 88, 0.25) 0%, rgba(44, 82, 177, 0.1) 100%);
-    /* Sharp Skinny Slant (approx 20% on top, 14% on bottom) */
-    clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
-    z-index: 1;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-}
+
 
 .home-hero .hero-content {
     padding: 0 20px 20px !important;
