@@ -5,7 +5,6 @@ folder = r"c:\Users\NAIGA\Desktop\Web Programming"
 
 new_files_config = {
     'programs.html': 'Academic Programs',
-    'staff.html': 'Our Staff & Faculty',
     'research.html': 'Research & Publications',
     'admissions.html': 'Admissions'
 }
@@ -32,12 +31,10 @@ for new_file, title in new_files_config.items():
 nav_template = """        <div class="nav-links">
             <a href="index.html"{home}>Home</a>
             <a href="about.html"{about}>About</a>
-            <a href="department.html"{dept}>Departments</a>
             <a href="programs.html"{prog}>Programs</a>
-            <a href="staff.html"{staff}>Staff</a>
             <a href="research.html"{res}>Research</a>
             <a href="admissions.html"{adm}>Admissions</a>
-            <a href="contact.html"{cont}>Contact</a>
+            <a href="#contact"{cont}>Contact</a>
         </div>"""
 
 html_files = [f for f in os.listdir(folder) if f.endswith('.html')]
@@ -49,12 +46,11 @@ for file in html_files:
     active_map = {
         'home': ' class="active"' if file == 'index.html' else '',
         'about': ' class="active"' if file == 'about.html' else '',
-        'dept': ' class="active"' if file == 'department.html' else '',
         'prog': ' class="active"' if file == 'programs.html' else '',
-        'staff': ' class="active"' if file == 'staff.html' else '',
+        # Use hash link
         'res': ' class="active"' if file == 'research.html' else '',
         'adm': ' class="active"' if file == 'admissions.html' else '',
-        'cont': ' class="active"' if file == 'contact.html' else ''
+        'cont': ''
     }
     
     new_nav = nav_template.format(**active_map)
