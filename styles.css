@@ -626,7 +626,7 @@ nav.scrolled .dropdown-btn {
     border-radius: 15px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    z-index: 99998 !important;
+    z-index: 100000 !important;
     margin-top: 10px;
 }
 
@@ -734,7 +734,7 @@ nav.scrolled .dropdown-btn {
 
 .hero-content {
     position: relative;
-    z-index: 5;
+    z-index: 1;
     max-width: 800px;
     animation: fadeInLeft 1s ease-out;
 }
