@@ -11,10 +11,18 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         @keyframes slideShow {
-            0% {
-                background-image: url('image.png');
+
+            0%,
+            30% {
+                background-image: url('1.jpg');
             }
 
+            33%,
+            63% {
+                background-image: url('2.jpg');
+            }
+
+            66%,
             100% {
                 background-image: url('image.png');
             }
@@ -23,25 +31,25 @@
         .home-hero {
             margin-top: 0;
             position: relative;
-            height: 100vh;
+            min-height: 65vh;
+            height: auto;
+            padding: 120px 20px 60px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             text-align: center;
             color: white;
             background-size: cover;
             background-position: center;
-            background-image: url('image.png');
-            /* Set as default */
-            /* Animation kept but points to same image as requested */
-            animation: slideShow 18s infinite ease-in-out;
+            background-image: url('1.jpg');
+            animation: slideShow 12s infinite ease-in-out;
         }
 
 
         .hero-content {
             position: relative;
             z-index: 2;
-            padding: 120px 20px 20px;
+            padding: 30px 20px 20px;
             animation: fadeInUp 1.2s ease-out forwards;
         }
 

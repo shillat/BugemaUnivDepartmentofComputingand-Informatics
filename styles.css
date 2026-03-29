@@ -707,16 +707,16 @@ nav.scrolled .dropdown-btn {
 
 /* ===== PAGE HERO SECTIONS ===== */
 .home-hero {
-    min-height: 100vh;
-    padding: 160px 20px 80px;
-    /* Reduced to standard container padding */
+    min-height: 60vh !important;
+    height: auto !important;
+    padding: 100px 20px 60px !important;
+    /* Reduced hero height so the department label appears higher in the viewport */
     background: url('image.png');
-    /* Use the user's preferred image */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     color: white;
@@ -739,6 +739,10 @@ nav.scrolled .dropdown-btn {
     z-index: 1;
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
+}
+
+.home-hero .hero-content {
+    padding: 0 20px 20px !important;
 }
 
 .hero-content {
