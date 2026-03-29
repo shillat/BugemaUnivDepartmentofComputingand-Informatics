@@ -1806,3 +1806,9 @@ nav.scrolled .dropdown-btn {
         width: 100% !important;
     }
 }
+
+@media print {
+    .news-ticker {
+        display: none !important;
+    }
+}
