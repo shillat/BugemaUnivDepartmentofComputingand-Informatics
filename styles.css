@@ -713,7 +713,7 @@ nav.scrolled .dropdown-btn {
     background-color: #0f172a;
     background-image: url('image.png');
     background-size: contain;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: scroll;
     display: flex;
