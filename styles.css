@@ -1246,12 +1246,6 @@ nav.scrolled .dropdown-btn {
         width: 100%;
     }
 
-    nav {
-        position: relative;
-        background: rgba(15, 36, 88, 0.95);
-        border-bottom: none;
-    }
-
     .nav-links a,
     .dropdown-btn {
         font-size: 0.82rem;
@@ -1544,7 +1538,7 @@ nav.scrolled .dropdown-btn {
 
     .university-section {
         padding: 40px 12px;
-        margin-top: -20px;
+        margin-top: 20px;
     }
 
     .university-card {
