@@ -32,10 +32,12 @@
         }
 
         .portal-card h3 {
-            color: var(--bu-blue);
-            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-size: 1.3rem;
             margin-top: 0;
-            font-weight: 700;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
         }
 
         .portal-card p {
@@ -63,7 +65,7 @@
         }
 
         .portal-card:nth-child(2) h3 {
-            color: var(--accent-blue);
+            color: var(--text-primary);
         }
 
         .portal-card:nth-child(3) {
@@ -71,7 +73,7 @@
         }
 
         .portal-card:nth-child(3) h3 {
-            color: var(--bu-blue-light);
+            color: var(--text-primary);
         }
     </style>
 </head>
@@ -137,46 +139,53 @@
             <!-- Main Service Grid -->
             <div class="portal-grid">
                 <div class="portal-card">
-                    <h3><i class="fas fa-id-card" style="margin-right: 10px;"></i>Course Registration</h3>
+                    <h3><i class="fas fa-id-card" style="margin-right: 12px; color: var(--accent-blue);"></i>Course
+                        Registration</h3>
                     <p>Officially register your course units for the 2026 Academic Year. Our dynamic system validates
                         your course codes directly against the Department of Computing curricula.</p>
-                    <ul style="font-size: 0.95rem; margin-bottom: 20px;">
+                    <ul style="font-size: 0.95rem; margin-bottom: 25px;">
                         <li>Self-service unit selection</li>
                         <li>Automated credit load validation</li>
                         <li>Departmental clearance tracking</li>
                     </ul>
-                    <a href="#"
-                        style="background: var(--bu-blue); color: var(--bu-blue); padding: 10px 20px; border-radius: 8px; width: 100%; text-align: center;">Launch
+                    <a href="registrationForm.html"
+                        style="background: var(--accent-blue); color: white !important; padding: 12px 20px; border-radius: 10px; width: 100%; text-align: center; text-transform: uppercase; font-size: 0.85rem;">Launch
                         Registration &rarr;</a>
                 </div>
 
                 <div class="portal-card">
-                    <h3><i class="fas fa-university" style="margin-right: 10px;"></i>University LMS (E-Learning)</h3>
+                    <h3><i class="fas fa-university"
+                            style="margin-right: 12px; color: var(--accent-blue);"></i>University LMS</h3>
                     <p>Your digital classroom. Access lecture recordings, participate in technical forums, and submit
                         project source-codes for evaluation.</p>
-                    <ul style="font-size: 0.95rem; margin-bottom: 20px;">
+                    <ul style="font-size: 0.95rem; margin-bottom: 25px;">
                         <li>Secure SSO (Single Sign-On) login</li>
                         <li>Download specialized lab materials</li>
                         <li>Real-time gradebook for assignments</li>
                     </ul>
-                    <a href="#"
-                        style="background: var(--accent-blue); color: var(--bu-blue); padding: 10px 20px; border-radius: 8px; width: 100%; text-align: center;">Enter
+                    <a href="https://bugema.ac.ug/lms/"
+                        style="background: var(--accent-blue); color: white !important; padding: 12px 20px; border-radius: 10px; width: 100%; text-align: center; text-transform: uppercase; font-size: 0.85rem;">Enter
                         Learning Space &rarr;</a>
                 </div>
 
                 <div class="portal-card">
-                    <h3><i class="fas fa-book-reader" style="margin-right: 10px;"></i>Computing Digital Library</h3>
+                    <h3><i class="fas fa-book-reader"
+                            style="margin-right: 12px; color: var(--accent-blue);"></i>Computing Digital Library</h3>
                     <p>Premium access to academic databases specifically for CS/IT research. Includes IEEE Xplore, ACM,
                         and the internal Departmental Thesis bank.</p>
-                    <a href="research.html" style="color: var(--bu-blue); display: block; margin-top: 15px;">Search
+                    <a href="research.html"
+                        style="color: var(--accent-blue); display: block; margin-top: 15px; font-weight: 800;">Search
                         Library Databases <i class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="portal-card">
-                    <h3><i class="fas fa-tools" style="margin-right: 10px;"></i>IT Support & Troubleshooting</h3>
+                    <h3><i class="fas fa-tools" style="margin-right: 12px; color: var(--accent-blue);"></i>IT Support &
+                        Troubleshooting</h3>
                     <p>Encountering issues with your lab login or campus Wi-Fi? Our technical team is available 24/7 to
                         resolve hardware and software conflicts.</p>
-                    <a href="#contact" style="color: var(--bu-blue); display: block; margin-top: 15px;">Open Support
+                    <a href="#contact"
+                        style="color: var(--accent-blue); display: block; margin-top: 15px; font-weight: 800;">Open
+                        Support
                         Ticket <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -185,7 +194,7 @@
             <div
                 style="background: #f8fafc; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; position: sticky; top: 100px;">
                 <h3
-                    style="color: var(--bu-blue); margin-top: 0; font-size: 1.2rem; border-bottom: 2px solid var(--bu-blue); padding-bottom: 10px;">
+                    style="color: var(--text-primary); margin-top: 0; font-size: 1.25rem; border-bottom: 2px solid var(--accent-blue); padding-bottom: 12px; font-weight: 800;">
                     Quick Actions</h3>
 
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
@@ -193,27 +202,28 @@
                         style="background: white; border: 1px solid #cbd5e1; color: var(--bu-blue); padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-calendar-alt" style="color: var(--bu-blue);"></i> View Class Timetable
                     </a>
-                    <a href="#"
+                    <a href="https://bugema.ac.ug/studentportal/login"
                         style="background: white; border: 1px solid #cbd5e1; color: var(--bu-blue); padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-poll-h" style="color: var(--bu-blue);"></i> Check Semester Results
                     </a>
-                    <a href="#"
+                    <a href="https://bugema.ac.ug/studentportal/login"
                         style="background: white; border: 1px solid #cbd5e1; color: var(--bu-blue); padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-coins" style="color: var(--bu-blue);"></i> Tuition & Fee Statement
                     </a>
-                    <a href="#"
+                    <a href="https://bugema.ac.ug/studentportal/login"
                         style="background: white; border: 1px solid #cbd5e1; color: var(--bu-blue); padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 10px;">
                         <i class="fas fa-file-invoice" style="color: var(--bu-blue);"></i> Print Official Transcript
                     </a>
                 </div>
 
                 <div
-                    style="margin-top: 30px; padding: 15px; background: rgba(26, 58, 138, 0.05); border-radius: 10px; border: 1px dashed var(--bu-blue);">
-                    <p style="margin: 0; font-size: 0.85rem; color: var(--bu-blue); font-weight: bold;">
+                    style="margin-top: 30px; padding: 15px; background: rgba(37, 99, 235, 0.05); border-radius: 10px; border: 1px dashed var(--accent-blue);">
+                    <p style="margin: 0; font-size: 0.85rem; color: var(--accent-blue); font-weight: 800;">
                         <i class="fas fa-info-circle"></i> Service Notice
                     </p>
-                    <p style="margin: 5px 0 0; font-size: 0.8rem; color: #64748b;">
-                        The Student Portal undergoing maintenance on Sunday, April 12th from 2:00 AM to 5:00 AM.
+                    <p style="margin: 5px 0 0; font-size: 0.8rem; color: #475569;">
+                        The Student Portal undergoing maintenance on Sunday, April 12th from 2:00 AM to 5:00 AM. We
+                        apologize for any inconvenience caused.
                     </p>
                 </div>
             </div>
@@ -246,6 +256,7 @@
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact">Contact & Support</a></li>
                     <li><a href="registrationForm.html">Register Online</a></li>
+                    <li><a href="admissionform.html">Apply for Admission</a></li>
                 </ul>
             </div>
             <div>
@@ -260,13 +271,12 @@
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
                 <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i
-                            class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"
+                        title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank"
+                        class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
                 <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
                     channels for real-time updates on campus events and IT workshops.</p>

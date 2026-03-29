@@ -36,6 +36,107 @@
             margin-top: 40px;
         }
 
+        /* Staff Profiles Styling */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(26, 58, 138, 0.05);
+            border-top: 4px solid var(--bu-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            z-index: 10;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 12px 30px rgba(26, 58, 138, 0.12);
+        }
+
+        .staff-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .staff-img,
+        .staff-placeholder-img {
+            width: 70px;
+            height: 70px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            border: 3px solid var(--light-blue);
+        }
+
+        .staff-img {
+            object-fit: cover;
+        }
+
+        .staff-placeholder-img {
+            background: #f1f5f9;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .staff-info h3 {
+            margin: 0;
+            color: var(--bu-blue);
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .staff-info p {
+            margin: 5px 0 0;
+            color: #64748b;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .staff-details p {
+            margin: 8px 0;
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .staff-details strong {
+            color: var(--bu-blue);
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .staff-contact {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #eee;
+            font-size: 0.85rem;
+            word-break: break-all;
+        }
+
+        .staff-contact a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
         @media (max-width: 768px) {
             .content-grid {
                 grid-template-columns: 1fr;
@@ -103,7 +204,7 @@
     <div class="container">
         <section class="content-grid">
             <div class="content-text">
-                <h2 style="color: var(--bu-blue); font-size: 2rem; font-weight: 800;">Our Heritage & Purpose</h2>
+                <h2 style="color: var(--text-primary); font-size: 2rem; font-weight: 800;">Our Heritage & Purpose</h2>
                 <p>The Department of Computing & Informatics at Bugema University stands as a pillar of technological
                     advancement in the region. We are dedicated to providing a transformative educational experience
                     that goes beyond the classroom.</p>
@@ -116,37 +217,10 @@
             </div>
         </section>
 
-        <section class="content-grid" style="margin-bottom: 60px;">
-            <div style="text-align: center;">
-                <div
-                    style="width: 220px; height: 220px; border-radius: 50%; border: 5px solid var(--bu-blue); margin: 0 auto 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(26, 58, 138, 0.2);">
-                    <img src="hod.png" alt="Head of Department" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <h3 style="color: var(--bu-blue); margin: 0; font-size: 1.3rem;">Mr. Ssewankambo Erma</h3>
-                <p style="margin: 5px 0 0; color: #64748b; font-weight: bold;">Head of Department</p>
-            </div>
-            <div class="content-text">
-                <h2 style="color: var(--bu-blue); font-size: 2rem; font-weight: 800; margin-top: 0;">Message from the
-                    HOD</h2>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #444; font-style: italic;">
-                    "It is my distinct pleasure to welcome you to the Department of Computing & Informatics. We are
-                    exceptionally proud to cultivate a culture of innovation, rigorous technical inquiry, and practical
-                    skill-building."
-                </p>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #444;">
-                    Our commitment is to graduate highly proficient professionals who are equipped to solve complex
-                    technological challenges. By upholding Christian values alongside academic excellence, we ensure
-                    that you are prepared not just for the dynamic IT industry, but for a lifetime of principled
-                    leadership.
-                </p>
-                <a href="about.html#staff"
-                    style="color: var(--bu-blue); font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px;">Meet
-                    Our Faculty <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
-            </div>
-        </section>
 
-        <section style="text-align: center;">
-            <h2 style="color: var(--bu-blue); font-size: 2.2rem; margin-bottom: 40px; font-weight: 800;">What We Stand
+        <section style="text-align: center; margin: 80px 0;">
+            <h2 style="color: var(--text-primary); font-size: 2.2rem; margin-bottom: 40px; font-weight: 800;">What We
+                Stand
                 For</h2>
             <div class="values-section">
                 <div class="value-card">
@@ -167,16 +241,202 @@
             </div>
         </section>
 
-        <div class="official-link">
-            <i class="fas fa-external-link-alt"
-                style="font-size: 1.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
-            <br>
-            <a href="#contact">
-                For more information, contact us
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
+        <section class="content-grid" style="margin-bottom: 100px;">
+            <div style="text-align: center;">
+                <div
+                    style="width: 220px; height: 220px; border-radius: 50%; border: 5px solid var(--bu-blue); margin: 0 auto 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(26, 58, 138, 0.2);">
+                    <img src="hod.png" alt="Head of Department" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 style="color: var(--bu-blue); margin: 0; font-size: 1.4rem; font-weight: 800;">Mr. Ssewankambo Erma
+                </h3>
+                <p style="margin: 5px 0 0; color: #64748b; font-weight: bold;">Head of Department</p>
+            </div>
+            <div class="content-text">
+                <h2 style="color: var(--text-primary); font-size: 2.2rem; font-weight: 800; margin-top: 0;">Message from
+                    the
+                    HOD</h2>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #444; font-style: italic;">
+                    "It is my distinct pleasure to welcome you to the Department of Computing & Informatics. We are
+                    exceptionally proud to cultivate a culture of innovation, rigorous technical inquiry, and practical
+                    skill-building."
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #444;">
+                    Our commitment is to graduate highly proficient professionals who are equipped to solve complex
+                    technological challenges. By upholding Christian values alongside academic excellence, we ensure
+                    that you are prepared not just for the dynamic IT industry, but for a lifetime of principled
+                    leadership.
+                </p>
+                <a href="#staff"
+                    style="color: var(--bu-blue); font-weight: bold; text-decoration: none; display: inline-block; margin-top: 15px;">Meet
+                    Our Faculty <i class="fas fa-arrow-down" style="margin-left: 5px;"></i></a>
+            </div>
+        </section>
+
+
+
+        <!-- Staff Profiles Section -->
+        <section id="staff" style="margin-top: 100px;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h2 style="color: var(--text-primary); font-size: 2.5rem; font-weight: 800;">Our Academic Staff</h2>
+                <p style="color: #64748b; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Our dedicated faculty
+                    members bring expertise, passion, and real-world experience to the classroom.</p>
+            </div>
+
+            <div class="staff-grid">
+                <!-- LEADER 1: DEAN -->
+                <div class="staff-card" style="border-top-color: var(--bu-blue);">
+                    <div class="staff-header">
+                        <img src="nagonvuma.png" alt="Dean Margaret Nagonvuma" class="staff-img"
+                            style="border-color: var(--bu-blue);">
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Dr. Margaret Nagonvuma</h3>
+                            <p>Dean of Faculty</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> PhD Information Technology, MSc CS</p>
+                        <p><strong>Research Area</strong> Digital Transformation, AI Ethics</p>
+                        <p><strong>Recent Work</strong> <em>Strategy for Digital Education 2026</em></p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:dean@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            dean@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+
+                <!-- LEADER 2: HOD -->
+                <div class="staff-card" style="border-top-color: var(--bu-blue);">
+                    <div class="staff-header">
+                        <img src="hod.png" alt="Mr. Ssewankambo Erma" class="staff-img"
+                            style="border-color: var(--bu-blue);">
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Mr. Ssewankambo Erma</h3>
+                            <p>Head of Department</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> MSc Computer Science, BSc IT</p>
+                        <p><strong>Research Area</strong> Cybersecurity, IT Governance</p>
+                        <p><strong>Recent Work</strong> <em>Enhancing Network Security (2025)</em></p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:essewankambo@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            essewankambo@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+
+                <!-- LEADER 3: SECRETARY -->
+                <div class="staff-card" style="border-top-color: var(--accent-blue);">
+                    <div class="staff-header">
+                        <img src="nalwoga grace.png" alt="Ms. Nalwoga Grace" class="staff-img"
+                            style="border-color: var(--accent-blue);">
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Ms. Nalwoga Grace</h3>
+                            <p>Departmental Secretary</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> MSc Computer Science</p>
+                        <p><strong>Responsibilities</strong> Admissions, Faculty Coordination, Student Records</p>
+                        <p><strong>Expertise</strong> UI/UX Design, Office Administration</p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:gnalwoga@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            gnalwoga@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+
+                <!-- Lecturer 2: Ssali Robert Balagade -->
+                <div class="staff-card" style="border-top-color: var(--accent-blue);">
+                    <div class="staff-header">
+                        <img src="ssali robert balagade.png" alt="Mr. Ssali Robert Balagade" class="staff-img"
+                            style="border-color: var(--accent-blue);">
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Mr. Ssali Robert Balagade</h3>
+                            <p>Senior Lecturer</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> MSc Information Systems</p>
+                        <p><strong>Research Area</strong> Database Management, Big Data</p>
+                        <p><strong>Recent Work</strong> <em>Optimizing Data Queries in Distributed Systems</em></p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:rssali@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            rssali@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+
+
+                <!-- Lecturer: Mr. David Kitumba -->
+                <div class="staff-card" style="border-top-color: var(--bu-blue-light);">
+                    <div class="staff-header">
+                        <div
+                            style="width: 70px; height: 70px; border-radius: 50%; border: 3px solid var(--bu-blue-light); display: flex; align-items: center; justify-content: center; background: #e8eef8; color: var(--bu-blue-light); font-size: 2rem; overflow: hidden;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Mr. David Kitumba</h3>
+                            <p>Senior Lecturer</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> PhD Computer Science, MSc SE</p>
+                        <p><strong>Research Area</strong> Software Engineering, AI</p>
+                        <p><strong>Recent Work</strong> <em>Adaptive AI in Enterprise Systems</em></p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:dkintu@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            dkintu@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+
+                <!-- Lecturer 4: Albert Walusimbi -->
+                <div class="staff-card" style="border-top-color: #f59e0b;">
+                    <div class="staff-header">
+                        <img src="albert walusimbi.png" alt="Mr. Albert Walusimbi" class="staff-img"
+                            style="border-color: #f59e0b;">
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Mr. Albert Walusimbi</h3>
+                            <p>Senior Lecturer</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> MSc Information Technology</p>
+                        <p><strong>Research Area</strong> Network Infrastructure, Cloud Computing</p>
+                        <p><strong>Recent Work</strong> <em>Cloud Adoption in Higher Education</em></p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:awalusimbi@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            awalusimbi@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+
+                <!-- Lecturer 5: Nandere Hudson Lubinga -->
+                <div class="staff-card" style="border-top-color: #10b981;">
+                    <div class="staff-header">
+                        <img src="nandere hudson lubinga.png" alt="Mr. Nandere Hudson Lubinga" class="staff-img"
+                            style="border-color: #10b981;">
+                        <div class="staff-info">
+                            <h3 style="color: var(--bu-blue);">Mr. Nandere Hudson Lubinga</h3>
+                            <p>Lecturer</p>
+                        </div>
+                    </div>
+                    <div class="staff-details">
+                        <p><strong>Qualifications</strong> BSc Computer Science, CCNA</p>
+                        <p><strong>Research Area</strong> Networking, System Administration</p>
+                        <p><strong>Recent Work</strong> <em>Scalable Networks for Remote Campuses</em></p>
+                    </div>
+                    <div class="staff-contact">
+                        <a href="mailto:hlubinga@bugemauniv.ac.ug"><i class="fas fa-envelope"></i>
+                            hlubinga@bugemauniv.ac.ug</a>
+                    </div>
+                </div>
+            </div> <!-- End staff-grid -->
+        </section> <!-- End staff-section -->
+
+
+    </div> <!-- End container -->
 
     <footer class="site-footer">
         <div class="footer-grid">
@@ -203,6 +463,7 @@
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact">Contact & Support</a></li>
                     <li><a href="registrationForm.html">Register Online</a></li>
+                    <li><a href="admissionform.html">Apply for Admission</a></li>
                 </ul>
             </div>
             <div>
@@ -217,13 +478,12 @@
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
                 <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i
-                            class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"
+                        title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank"
+                        class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
                 <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
                     channels for real-time

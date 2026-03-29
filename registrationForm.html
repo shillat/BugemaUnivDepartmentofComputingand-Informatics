@@ -32,7 +32,7 @@
         }
 
         .form-header h1 {
-            color: var(--bu-blue);
+            color: var(--text-primary);
             font-size: 1.8rem;
             margin: 0;
             text-transform: uppercase;
@@ -40,7 +40,7 @@
         }
 
         .form-header p {
-            color: var(--bu-blue);
+            color: var(--text-primary);
             font-weight: bold;
             letter-spacing: 1px;
             margin: 5px 0 0;
@@ -54,7 +54,7 @@
         }
 
         h3 {
-            color: var(--bu-blue);
+            color: var(--text-primary);
             font-size: 1.1rem;
             margin-bottom: 20px;
             display: flex;
@@ -64,14 +64,14 @@
 
         h3 i {
             margin-right: 10px;
-            color: var(--bu-blue);
+            color: var(--accent-blue);
         }
 
         label {
             display: block;
             font-weight: 600;
             font-size: 0.85rem;
-            color: #444;
+            color: var(--text-primary);
             margin-bottom: 8px;
         }
 
@@ -223,6 +223,7 @@
 
     <div class="registration-card">
         <div class="form-header">
+            <img src="logoBU.jpg" alt="Logo" style="width: 80px; margin-bottom: 5px;">
             <h1>Student Registration Form</h1>
             <p>Department of Computing and Informatics</p>
 
@@ -266,16 +267,24 @@
             <div style="display: flex; gap: 20px;">
                 <div style="flex: 2;">
                     <label>Degree Programme</label>
-                    <select required>
+                    <select id="programmeSelect" required>
                         <option value="" disabled selected>Select your course</option>
                         <option>B.Sc. Software Engineering</option>
-                        <option>B.Sc. Computer Science</option>
-                        <option>B. Information Technology</option>
+                        <option>Bachelor of Records and Archives Management</option>
+                        <option>Bachelor of Information Technology</option>
+                        <option>BSc Network Systems Administration</option>
+                        <option>BSc Applied Data Science and Artificial Intelligence</option>
+                        <option>Diploma in Computer Forensics</option>
+                        <option>Diploma in Information Technology</option>
+                        <option>Certificate in Information Technology</option>
+                        <option>Bachelor of Library and Information Science</option>
+                        <option>Bachelor of Business Computing</option>
                     </select>
                 </div>
                 <div style="flex: 1;">
                     <label>Current Semester</label>
-                    <select required>
+                    <select id="semesterSelect" required>
+                        <option value="" disabled selected>Select Level</option>
                         <option>Year 1, Sem I</option>
                         <option>Year 1, Sem II</option>
                         <option>Year 2, Sem I</option>
@@ -288,16 +297,17 @@
 
             <hr>
 
-            <h3><i class="fas fa-list-check"></i> Course Selection</h3>
-            <div class="course-grid">
-                <div class="course-item"><input type="checkbox"> <strong>IT 1201:</strong> Web Design & Dev</div>
-                <div class="course-item"><input type="checkbox"> <strong>CSC 2103:</strong> Database Systems</div>
-                <div class="course-item"><input type="checkbox"> <strong>CSC 2205:</strong> Software Engineering</div>
-                <div class="course-item"><input type="checkbox"> <strong>IT 2104:</strong> Computer Networks</div>
-                <div class="course-item"><input type="checkbox"> <strong>CSC 1202:</strong> Programming Labs</div>
-                <div class="course-item"><input type="checkbox"> <strong>CSC 2101:</strong> Data Structures</div>
-                <div class="course-item"><input type="checkbox"> <strong>ENG 1101:</strong> Communication Skills</div>
-                <div class="course-item"><input type="checkbox"> <strong>MTH 1203:</strong> Discrete Mathematics</div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+                <h3><i class="fas fa-list-check"></i> 1. Course Selection</h3>
+                <div id="creditSummary" style="font-weight:bold; color:var(--bu-blue); font-size:0.9rem; background:var(--light-blue); padding:5px 12px; border-radius:30px;">
+                    Total Credits: <span id="totalCredits">0</span>
+                </div>
+            </div>
+            
+            <div id="courseGrid" class="course-grid">
+                <div style="color: #64748b; font-size: 0.9rem; grid-column: 1 / -1; text-align: center; padding: 20px;">
+                    Select your programme and semester to see available course units.
+                </div>
             </div>
 
             <button type="submit" class="submit-btn" style="margin-top: 25px;"><i class="fas fa-check-circle"
@@ -330,6 +340,7 @@
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact">Contact & Support</a></li>
                     <li><a href="registrationForm.html">Register Online</a></li>
+                                    <li><a href="admissionform.html">Apply for Admission</a></li>
                 </ul>
             </div>
             <div>
@@ -343,13 +354,9 @@
             </div>
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
-                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i
-                            class="fab fa-whatsapp"></i></a>
+                                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
                 <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official

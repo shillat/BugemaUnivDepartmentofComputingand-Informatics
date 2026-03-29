@@ -81,21 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return div.innerHTML; // Converts <script> to &lt;script&gt;
     }
 
-    const contactForm = document.querySelector('form');
-    if (contactForm && window.location.pathname.includes('contact.html')) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // SECURITY DEMONSTRATION: Sanitize everything before use
-            const name = sanitizeInput(document.getElementById('full-name').value);
-            const email = sanitizeInput(document.getElementById('email-address').value);
-            const message = sanitizeInput(document.getElementById('message-body').value);
-
-            console.log("SECURE DATA:", { name, email, message });
-            alert("SUCCESS: Your message has been sanitized and sent securely (XSS Protected)!");
-            contactForm.reset();
-        });
-    }
+    // ===== Global Form Handler (Optional) =====
+    // No specific contact form handling needed as contact.html was removed.
+    // Navigation to socials is now handled via #contact anchor tag in HTML.
 
     // ===== Scroll-to-Top Button (RESTORED) =====
     const scrollBtn = document.createElement('button');
@@ -111,5 +99,119 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+    // ===== Dynamic Course Unit System (Embedded DB for Local Reliability) =====
+    const progSelect = document.getElementById('programmeSelect');
+    const semSelect = document.getElementById('semesterSelect');
+    const courseGrid = document.getElementById('courseGrid');
+    const totalCreditsSpan = document.getElementById('totalCredits');
 
+    const coursesData = {
+        "B.Sc. Software Engineering": {
+            "Year 1, Sem I": [
+                {"code": "SE 1101", "name": "Intro to Software Engineering", "credits": 4},
+                {"code": "CSC 1102", "name": "Programming Fundamentals", "credits": 3},
+                {"code": "MTH 1103", "name": "Discrete Mathematics", "credits": 4}
+            ],
+            "Year 1, Sem II": [
+                {"code": "SE 1201", "name": "Software Requirements Engineering", "credits": 4},
+                {"code": "CSC 1202", "name": "Data Structures & Algorithms", "credits": 3},
+                {"code": "ENG 1203", "name": "Communication Skills", "credits": 3}
+            ]
+        },
+        "Bachelor of Records and Archives Management": {
+            "Year 1, Sem I": [
+                {"code": "BRAM 1101", "name": "Principles of Archival Science", "credits": 3},
+                {"code": "BRAM 1102", "name": "Information Theory", "credits": 4},
+                {"code": "ENG 1103", "name": "Communication Skills", "credits": 3}
+            ],
+            "Year 1, Sem II": [
+                {"code": "BRAM 1201", "name": "Digital Records Management", "credits": 3},
+                {"code": "BRAM 1202", "name": "Preservation & Conservation", "credits": 3},
+                {"code": "IT 1203", "name": "Web Design for Archives", "credits": 3}
+            ]
+        },
+        "Bachelor of Information Technology": {
+            "Year 1, Sem I": [
+                {"code": "BIT 1101", "name": "Fundamentals of IT", "credits": 4},
+                {"code": "CSC 1102", "name": "Programming in C", "credits": 3},
+                {"code": "IT 1103", "name": "Intro to Databases", "credits": 4}
+            ],
+            "Year 1, Sem II": [
+                {"code": "BIT 1201", "name": "Systems Administration", "credits": 3},
+                {"code": "BIT 1202", "name": "Computer Networking", "credits": 4},
+                {"code": "ENG 1203", "name": "Technical Writing", "credits": 3}
+            ]
+        },
+        "BSc Network Systems Administration": {
+            "Year 1, Sem I": [
+                {"code": "NSA 1101", "name": "Cisco Routing & Switching", "credits": 4},
+                {"code": "NSA 1102", "name": "System Security", "credits": 3}
+            ],
+            "Year 1, Sem II": [
+                {"code": "NSA 1201", "name": "Server Administration", "credits": 4},
+                {"code": "NSA 1202", "name": "Cloud Computing Fundamentals", "credits": 3}
+            ]
+        },
+        "BSc Applied Data Science and Artificial Intelligence": {
+            "Year 1, Sem I": [
+                {"code": "DS 1101", "name": "Python for Data Science", "credits": 4},
+                {"code": "DS 1102", "name": "Probability & Statistics", "credits": 3}
+            ],
+            "Year 1, Sem II": [
+                {"code": "DS 1201", "name": "Machine Learning I", "credits": 4},
+                {"code": "DS 1202", "name": "Data Visualization", "credits": 3}
+            ]
+        }
+    };
+
+    if (progSelect && semSelect && courseGrid) {
+        const updateGrid = () => {
+            const prog = progSelect.value;
+            const sem = semSelect.value;
+            
+            // Need both selections to fetch
+            if (!prog || !sem) {
+                courseGrid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:20px; color:#64748b;">Please select both Programme and Semester level to see units.</div>`;
+                return;
+            }
+
+            const units = coursesData[prog]?.[sem] || [];
+            courseGrid.innerHTML = ''; 
+
+            if (units.length === 0) {
+                courseGrid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:20px; color:#ef4444; font-weight:600;">No units found for ${prog} - ${sem}.</div>`;
+                return;
+            }
+
+            units.forEach(unit => {
+                const div = document.createElement('div');
+                div.className = 'course-item';
+                div.innerHTML = `
+                    <input type="checkbox" class="course-check" data-credits="${unit.credits}" checked>
+                    <div style="display:flex; flex-direction:column;">
+                        <strong style="color:var(--bu-blue);">${unit.code}</strong>
+                        <span style="font-size:0.8rem; font-weight:600;">${unit.name} (${unit.credits} CU)</span>
+                    </div>
+                `;
+                courseGrid.appendChild(div);
+            });
+
+            calculateCredits();
+            
+            document.querySelectorAll('.course-check').forEach(check => {
+                check.addEventListener('change', calculateCredits);
+            });
+        };
+
+        function calculateCredits() {
+            let total = 0;
+            document.querySelectorAll('.course-check:checked').forEach(check => {
+                total += parseFloat(check.getAttribute('data-credits') || 0);
+            });
+            totalCreditsSpan.textContent = total;
+        }
+
+        progSelect.addEventListener('change', updateGrid);
+        semSelect.addEventListener('change', updateGrid);
+    }
 });

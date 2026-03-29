@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admissions Portal | Bugema University - Dept of Computing & Informatics</title>
-    <meta name="description" content="Apply online to the Department of Computing & Informatics at Bugema University. Download forms and submit your application.">
+    <meta name="description"
+        content="Apply online to the Department of Computing & Informatics at Bugema University. Download forms and submit your application.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -30,7 +31,7 @@
         legend {
             padding: 0 12px;
             font-weight: 700;
-            color: var(--bu-blue);
+            color: var(--text-primary);
             font-size: 1.05rem;
         }
 
@@ -81,7 +82,7 @@
             display: block;
             margin-bottom: 14px;
             font-weight: 600;
-            color: var(--bu-blue);
+            color: var(--text-primary);
         }
 
         form input,
@@ -121,7 +122,7 @@
         }
 
         .form-header h1 {
-            color: var(--bu-blue);
+            color: var(--text-primary);
             font-size: 1.8rem;
             margin: 0;
             text-transform: uppercase;
@@ -129,29 +130,39 @@
         }
 
         .form-header p {
-            color: var(--bu-blue);
+            color: var(--text-primary);
             font-weight: bold;
             letter-spacing: 1px;
             margin: 5px 0 0;
         }
 
         @media print {
-            nav, .page-hero, .site-footer, button[type="submit"], button[onclick="window.print()"], p.NOTE {
+
+            nav,
+            .page-hero,
+            .site-footer,
+            button[type="submit"],
+            button[onclick="window.print()"],
+            p.NOTE {
                 display: none !important;
             }
+
             body {
                 background: white;
             }
+
             .application-card {
                 box-shadow: none;
                 margin: 0;
                 padding: 10px 0;
                 max-width: 100%;
             }
+
             fieldset {
                 break-inside: avoid;
                 border: 2px solid #ccc;
             }
+
             .form-header {
                 display: block !important;
             }
@@ -192,19 +203,24 @@
         </div>
     </nav>
 
-        <div class="news-ticker">
+    <div class="news-ticker">
         <div class="ticker-label">Breaking Updates</div>
         <div class="ticker-wrap">
             <div class="ticker-move">
-                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now officially OPEN!</span>
-                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now fully Operational.</span>
-                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for the 2026 Dean's List!</span>
-                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud Computing" - Friday 10:00 AM.</span>
-                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation for the 2026 Region Awards.</span>
+                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now
+                    officially OPEN!</span>
+                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now
+                    fully Operational.</span>
+                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for
+                    the 2026 Dean's List!</span>
+                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud
+                    Computing" - Friday 10:00 AM.</span>
+                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation
+                    for the 2026 Region Awards.</span>
             </div>
         </div>
     </div>
-<header class="page-hero">
+    <header class="page-hero">
         <h1>Admissions Portal</h1>
         <p>Apply to the Department of Computing & Informatics at Bugema University</p>
     </header>
@@ -214,9 +230,10 @@
             <img src="logoBU.jpg" alt="Logo">
             <h1>Application For Admission</h1>
             <p>Department of Computing and Informatics</p>
-            
+
             <div style="margin-top: 20px;">
-                <button type="button" class="btn primary" style="width: auto; padding: 10px 20px; font-size: 0.95rem;" onclick="window.print()">
+                <button type="button" class="btn primary" style="width: auto; padding: 10px 20px; font-size: 0.95rem;"
+                    onclick="window.print()">
                     <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> Download / Print File
                 </button>
             </div>
@@ -229,7 +246,7 @@
                 <fieldset>
                     <legend><i class="fas fa-user" style="margin-right: 8px;"></i>Personal Details</legend>
                     <label for="fullName">Full Name</label>
-                    <input id="fullName" type="text" name="fullName" required placeholder="e.g. Jane Doe">
+                    <input id="fullName" type="text" name="fullName" required placeholder="e.g. Kamya Lawrence">
                     <label for="email">Email</label>
                     <input id="email" type="email" name="email" required placeholder="email@example.com">
                     <label for="phone">Phone Number</label>
@@ -243,7 +260,7 @@
                         <option value="">Select</option>
                         <option value="female">Female</option>
                         <option value="male">Male</option>
-                        <option value="preferNot">Prefer not to say</option>
+
                     </select>
                 </fieldset>
 
@@ -252,10 +269,24 @@
                     <label for="program">Program applying for</label>
                     <select id="program" name="program" required>
                         <option value="">Select program</option>
-                        <option value="bsc_computer_science">BSc Computer Science</option>
-                        <option value="bsc_information_technology">BSc Information Technology</option>
-                        <option value="msc_computer_science">MSc Computer Science</option>
-                        <option value="pgd_software_engineering">PGD Software Engineering</option>
+                        <optgroup label="Undergraduate Programs">
+                            <option>B.Sc. Software Engineering</option>
+                            <option>Bachelor of Records and Archives Management</option>
+                            <option>Bachelor of Information Technology</option>
+                            <option>BSc Network Systems Administration</option>
+                            <option>BSc Applied Data Science and Artificial Intelligence</option>
+                            <option>Diploma in Computer Forensics</option>
+                            <option>Diploma in Information Technology</option>
+                            <option>Certificate in Information Technology</option>
+                            <option>Bachelor of Library and Information Science</option>
+                            <option>Bachelor of Business Computing</option>
+                        </optgroup>
+                        <optgroup label="Postgraduate Programs">
+                            <option>MSc Computing & Information Systems</option>
+                            <option>MSc Software Engineering</option>
+                            <option>Postgraduate Diploma in IT</option>
+                            <option>PhD in Computer Science</option>
+                        </optgroup>
                     </select>
                     <label for="level">Study Level</label>
                     <select id="level" name="level" required>
@@ -266,18 +297,20 @@
                 </fieldset>
 
                 <fieldset>
-                    <legend><i class="fas fa-certificate" style="margin-right: 8px;"></i>Academic Background & Qualifications</legend>
+                    <legend><i class="fas fa-certificate" style="margin-right: 8px;"></i>Academic Background &
+                        Qualifications</legend>
                     <div style="display: flex; gap: 20px;">
                         <div style="flex: 1;">
                             <label for="oLevelIndex">O-Level (S.4) Index No.</label>
-                            <input id="oLevelIndex" type="text" name="oLevelIndex" required placeholder="e.g. U0000/000">
+                            <input id="oLevelIndex" type="text" name="oLevelIndex" required
+                                placeholder="e.g. U0000/000">
                         </div>
                         <div style="flex: 1;">
                             <label for="oLevelYear">Year of Sitting</label>
                             <input id="oLevelYear" type="number" name="oLevelYear" required placeholder="e.g. 2018">
                         </div>
                     </div>
-                    
+
                     <div style="display: flex; gap: 20px;">
                         <div style="flex: 1;">
                             <label for="aLevelIndex">A-Level (S.6) Index No.</label>
@@ -290,22 +323,24 @@
                     </div>
 
                     <label for="previousInstitution">Previous Institution (If Diploma/Degree)</label>
-                    <input id="previousInstitution" type="text" name="previousInstitution" placeholder="e.g. Makerere University">
+                    <input id="previousInstitution" type="text" name="previousInstitution"
+                        placeholder="e.g. Makerere University">
                 </fieldset>
 
                 <fieldset>
                     <legend><i class="fas fa-file-upload" style="margin-right: 8px;"></i>Supporting Documents</legend>
-                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">Please upload scanned copies of your academic documents.</p>
-                    
+                    <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 15px;">Please upload scanned copies of
+                        your academic documents.</p>
+
                     <label for="oLevelUpload">O-Level (S.4) Pass Slip / Certificate (PDF / JPG)</label>
                     <input id="oLevelUpload" type="file" name="oLevelUpload" accept=".pdf,.jpg,.jpeg,.png" required>
-                    
+
                     <label for="aLevelUpload">A-Level (S.6) Pass Slip / Certificate (PDF / JPG)</label>
                     <input id="aLevelUpload" type="file" name="aLevelUpload" accept=".pdf,.jpg,.jpeg,.png">
-                    
+
                     <label for="otherDocs">Diploma / Degree Transcript (If applicable)</label>
                     <input id="otherDocs" type="file" name="otherDocs" accept=".pdf,.jpg,.jpeg,.png">
-                    
+
                     <label for="idDocument">National ID / Passport</label>
                     <input id="idDocument" type="file" name="idDocument" accept=".pdf,.jpg,.jpeg,.png" required>
                 </fieldset>
@@ -324,7 +359,8 @@
 
                 <p style="font-size: 0.85rem; color: #64748b; margin-top: 20px;">
                     NOTE: This is a demo form. Final submission is done through the admissions office at
-                    <a href="mailto:admissions@bugemauniv.ac.ug" style="color: var(--bu-blue);">admissions@bugemauniv.ac.ug</a>.
+                    <a href="mailto:admissions@bugemauniv.ac.ug"
+                        style="color: var(--bu-blue);">admissions@bugemauniv.ac.ug</a>.
                 </p>
             </form>
         </section>
@@ -335,12 +371,16 @@
             <div>
                 <div class="footer-brand" style="display: flex; align-items: center; margin-bottom: 25px;">
                     <div>
-                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA</h3>
-                        <p style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">University</p>
+                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA
+                        </h3>
+                        <p
+                            style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">
+                            University</p>
                     </div>
                 </div>
                 <p style="font-size: 0.92rem; line-height: 1.8; opacity: 0.6; margin-bottom: 20px;">
-                    Excellence in Service. Empowering the next generation of tech leaders through quality computing education and Christian values.
+                    Excellence in Service. Empowering the next generation of tech leaders through quality computing
+                    education and Christian values.
                 </p>
             </div>
             <div>
@@ -351,6 +391,7 @@
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact">Contact & Support</a></li>
                     <li><a href="registrationForm.html">Register Online</a></li>
+                    <li><a href="admissionform.html">Apply for Admission</a></li>
                 </ul>
             </div>
             <div>
@@ -365,14 +406,15 @@
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
                 <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"
+                        title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank"
+                        class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
-                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official channels for real-time updates on campus events and IT workshops.</p>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
+                    channels for real-time updates on campus events and IT workshops.</p>
             </div>
         </div>
         <div class="footer-bottom">

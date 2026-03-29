@@ -1,0 +1,38 @@
+{
+    "B.Sc. Software Engineering": {
+        "Year 1, Sem I": [
+            {"code": "SE 1101", "name": "Intro to Software Engineering", "credits": 4},
+            {"code": "CSC 1102", "name": "Programming Fundamentals", "credits": 3},
+            {"code": "MTH 1103", "name": "Discrete Mathematics", "credits": 4}
+        ],
+        "Year 1, Sem II": [
+            {"code": "SE 1201", "name": "Software Requirements Engineering", "credits": 4},
+            {"code": "CSC 1202", "name": "Data Structures & Algorithms", "credits": 3},
+            {"code": "ENG 1203", "name": "Communication Skills", "credits": 3}
+        ]
+    },
+    "B.Sc. Computer Science": {
+        "Year 1, Sem I": [
+            {"code": "CSC 1101", "name": "Introduction to Computing", "credits": 3},
+            {"code": "MTH 1102", "name": "Calculus & Algebra", "credits": 4},
+            {"code": "CSC 1103", "name": "Computer Architecture", "credits": 3}
+        ],
+        "Year 1, Sem II": [
+            {"code": "CSC 1201", "name": "Object Oriented Programming", "credits": 4},
+            {"code": "IT 1202", "name": "Web Design Fundamentals", "credits": 3},
+            {"code": "PHY 1203", "name": "Introduction to Electronics", "credits": 3}
+        ]
+    },
+    "B. Information Technology": {
+        "Year 1, Sem I": [
+            {"code": "IT 1101", "name": "IT Infrastructure & Systems", "credits": 4},
+            {"code": "CSC 1102", "name": "Fundamentals of Programming", "credits": 3},
+            {"code": "IT 1103", "name": "Business Info Systems", "credits": 3}
+        ],
+        "Year 1, Sem II": [
+            {"code": "IT 1201", "name": "Network Routing & Switching", "credits": 4},
+            {"code": "CSC 1202", "name": "Databases Management", "credits": 3},
+            {"code": "ENG 1203", "name": "Technical Writing", "credits": 3}
+        ]
+    }
+}

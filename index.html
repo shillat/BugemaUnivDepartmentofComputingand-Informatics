@@ -12,31 +12,11 @@
     <style>
         @keyframes slideShow {
             0% {
-                background-image: url('ict.jpg');
-            }
-
-            30% {
-                background-image: url('ict.jpg');
-            }
-
-            33% {
                 background-image: url('image.png');
-            }
-
-            63% {
-                background-image: url('image.png');
-            }
-
-            66% {
-                background-image: url('img.png');
-            }
-
-            96% {
-                background-image: url('img.png');
             }
 
             100% {
-                background-image: url('ict.jpg');
+                background-image: url('image.png');
             }
         }
 
@@ -51,19 +31,12 @@
             color: white;
             background-size: cover;
             background-position: center;
+            background-image: url('image.png');
+            /* Set as default */
+            /* Animation kept but points to same image as requested */
             animation: slideShow 18s infinite ease-in-out;
         }
 
-        .home-hero::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(15, 36, 88, 0.78), rgba(26, 58, 138, 0.68));
-            z-index: 1;
-        }
 
         .hero-content {
             position: relative;
@@ -173,52 +146,15 @@
         </div>
     </header>
 
-    <section style="padding: 80px 20px; max-width: 1100px; margin: auto; text-align: center;">
-        <h2 style="color: var(--bu-blue); font-size: 2.2rem; margin-bottom: 40px; font-weight: 800;">Department at a
-            Glance</h2>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 25px;">
-            <div class="value-card">
-                <i class="fas fa-laptop-code"
-                    style="font-size: 2.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
-                <h3>Undergraduate Programs</h3>
-                <p>BSc Computer Science, BSc Information Technology with modern course outlines.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-user-graduate"
-                    style="font-size: 2.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
-                <h3>Postgraduate Options</h3>
-                <p>MSc Computer Science and IT Management with thesis and project research streams.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-microscope" style="font-size: 2.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
-                <h3>Research Strength</h3>
-                <p>AI, Cybersecurity, Data Analytics, and Software Engineering projects with published outputs.</p>
-            </div>
-            <div class="value-card">
-                <i class="fas fa-headset" style="font-size: 2.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
-                <h3>Student Support</h3>
-                <p>Virtual labs, online portal, career guidance and personalized mentoring.</p>
-            </div>
-        </div>
-    </section>
 
-    <section style="padding: 80px 20px; max-width: 900px; margin: auto; text-align: center;">
-        <h2 style="color: var(--bu-blue); font-size: 2.2rem; margin-bottom: 20px; font-weight: 800;">Why Choose Our
-            Department?</h2>
-        <div class="content-card" style="max-width: 900px;">
-            <p style="font-size: 1.15rem; color: var(--text-default); line-height: 1.8; margin: 0;">
-                Our department offers modern computing courses, hands-on laboratory experience, and expert faculty
-                guidance. We prepare students for careers in software engineering, IT management, and data science.
-            </p>
-        </div>
-    </section>
 
     <section class="university-section">
         <div class="university-card">
             <div style="flex: 1; min-width: 250px; text-align: center;">
                 <div
                     style="width: 200px; height: 200px; border-radius: 50%; border: 5px solid var(--bu-blue); margin: 0 auto 20px; overflow: hidden; box-shadow: 0 10px 30px var(--shadow-blue); background: var(--light-blue); display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-user-tie" style="font-size: 5.5rem; color: var(--bu-blue);"></i>
+                    <img src="nagonvuma.png" alt="Dean Margaret Nagonvuma"
+                        style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
                 <h3 style="color: var(--bu-blue); margin: 0; font-size: 1.4rem; font-weight: 800;">Dr. Margaret
                     Nagonvuma</h3>
@@ -246,7 +182,7 @@
 
     <section style="padding: 80px 20px; background: linear-gradient(135deg, #e8eef8 0%, #f8f9fa 100%);">
         <div style="max-width: 1100px; margin: auto; text-align: center;">
-            <h2 style="color: var(--bu-blue); font-size: 2.2rem; margin-bottom: 20px; font-weight: 800;">Explore Our
+            <h2 style="color: var(--text-primary); font-size: 2.2rem; margin-bottom: 20px; font-weight: 800;">Explore Our
                 Department</h2>
             <p style="font-size: 1.1rem; color: #555; margin-bottom: 120px;">Discover our academic programs, admissions
                 process, and campus life</p>
@@ -254,12 +190,12 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <div class="value-card" style="border-top-color: var(--bu-blue);">
                     <i class="fas fa-graduation-cap"
-                        style="font-size: 3rem; color: var(--bu-blue); margin-bottom: 20px;"></i>
+                        style="font-size: 3rem; color: var(--accent-blue); margin-bottom: 20px;"></i>
                     <h3>Academic Programs</h3>
                     <p style="color: #666; margin-bottom: 20px;">Explore our diverse range of
                         undergraduate and postgraduate programs designed to prepare you for success.</p>
                     <a href="programs.html"
-                        style="color: var(--bu-blue); text-decoration: none; font-weight: bold;">Learn More →</a>
+                        style="color: var(--accent-blue); text-decoration: none; font-weight: bold;">Learn More →</a>
                 </div>
 
                 <div class="value-card" style="border-top-color: var(--accent-blue);">
@@ -268,16 +204,18 @@
                     <h3>Admissions</h3>
                     <p style="color: #666; margin-bottom: 20px;">Join our community of scholars. Learn
                         about admission requirements and application procedures.</p>
-                    <a href="#" style="color: var(--bu-blue); text-decoration: none; font-weight: bold;">Apply Now →</a>
+                    <a href="admissions.html"
+                        style="color: var(--accent-blue); text-decoration: none; font-weight: bold;">Apply Now →</a>
                 </div>
 
                 <div class="value-card" style="border-top-color: var(--bu-blue-light);">
                     <i class="fas fa-newspaper"
-                        style="font-size: 3rem; color: var(--bu-blue-light); margin-bottom: 20px;"></i>
+                        style="font-size: 3rem; color: var(--accent-blue); margin-bottom: 20px;"></i>
                     <h3>News & Events</h3>
                     <p style="color: #666; margin-bottom: 20px;">Stay updated with the latest news,
                         events, and announcements from Bugema University.</p>
-                    <a href="#" style="color: var(--bu-blue); text-decoration: none; font-weight: bold;">Read More →</a>
+                    <a href="news.html" style="color: var(--accent-blue); text-decoration: none; font-weight: bold;">Read
+                        More →</a>
                 </div>
             </div>
         </div>
@@ -308,6 +246,7 @@
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact">Contact & Support</a></li>
                     <li><a href="registrationForm.html">Register Online</a></li>
+                                    <li><a href="admissionform.html">Apply for Admission</a></li>
                 </ul>
             </div>
             <div>
@@ -321,13 +260,9 @@
             </div>
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
-                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i
-                            class="fab fa-whatsapp"></i></a>
+                                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
                 <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official

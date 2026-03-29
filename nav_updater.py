@@ -5,6 +5,7 @@ folder = r"c:\Users\NAIGA\Desktop\Web Programming"
 
 new_files_config = {
     'programs.html': 'Academic Programs',
+    
     'research.html': 'Research & Publications',
     'admissions.html': 'Admissions'
 }
@@ -47,10 +48,9 @@ for file in html_files:
         'home': ' class="active"' if file == 'index.html' else '',
         'about': ' class="active"' if file == 'about.html' else '',
         'prog': ' class="active"' if file == 'programs.html' else '',
-        # Use hash link
         'res': ' class="active"' if file == 'research.html' else '',
         'adm': ' class="active"' if file == 'admissions.html' else '',
-        'cont': ''
+        'cont': '' # Anchor links don't usually have active state across pages
     }
     
     new_nav = nav_template.format(**active_map)

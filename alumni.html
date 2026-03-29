@@ -5,237 +5,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Alumni | Bugema University - Dept of Computing & Informatics</title>
-    <meta name="description" content="Meet our successful alumni from the Department of Computing & Informatics at Bugema University.">
+    <meta name="description"
+        content="Meet our successful alumni from the Department of Computing & Informatics at Bugema University.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .alumni-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px var(--shadow-blue);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left;
-            border-top: 5px solid var(--bu-blue);
-            opacity: 1 !important;
-            transform: none !important;
-            z-index: 10;
-        }
-        .alumni-card:hover {
-            transform: translateY(-8px) !important;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-        .alumni-header {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-        .alumni-icon {
-            font-size: 3rem;
-            color: var(--bu-blue-light);
-            background: var(--light-blue);
-            border-radius: 50%;
-            padding: 10px;
-            width: 70px;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Modernized Alumni Styles */
+        .leadership-board {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
         }
 
-        /* Hierarchy Styles */
-        .leadership-section {
-            padding: 60px 0;
-            background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
-            border-radius: 30px;
-            margin-bottom: 80px;
-            box-shadow: inset 0 0 50px rgba(26, 58, 138, 0.03);
-        }
-        .hierarchy-tier {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-        }
-        .leader-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 15px 45px var(--shadow-blue);
+        .board-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 24px;
             text-align: center;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 10px 40px rgba(26, 58, 138, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-            transition: all 0.4s ease;
-            border: 1px solid var(--border-color);
-            max-width: 320px;
+            overflow: hidden;
+        }
+
+        .board-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(26, 58, 138, 0.12);
+            border-color: var(--accent-blue);
+        }
+
+        .board-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 4px;
+            background: var(--accent-blue);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .leader-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(26, 58, 138, 0.15);
-            border-color: var(--bu-blue-light);
+
+        .board-card:hover::after {
+            opacity: 1;
         }
-        .leader-image {
+
+        .leader-avatar {
             width: 100px;
             height: 100px;
-            background: var(--light-blue);
+            background: #f1f5f9;
             border-radius: 50%;
-            margin: -60px auto 20px;
+            margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: var(--bu-blue);
-            border: 5px solid var(--card-bg);
-            box-shadow: 0 10px 25px var(--shadow-blue);
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            border: 4px solid white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
-        .patron-card {
-            max-width: 500px;
-            margin-top: 40px;
-            display: flex;
-            flex-direction: row;
-            text-align: left;
-            padding: 35px;
-            gap: 25px;
-        }
-        .patron-card .leader-image {
-            margin: 0;
-            flex-shrink: 0;
-            width: 120px;
-            height: 120px;
-            font-size: 3.5rem;
-        }
-        .leader-info h3 {
-            margin: 0 0 5px;
-            color: var(--bu-blue);
+
+        .leader-name {
+            color: var(--text-primary);
+            font-size: 1.4rem;
             font-weight: 800;
+            margin-bottom: 8px;
         }
-        .leader-info .title {
-            color: var(--bu-blue-light);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
-        .desc {
+
+        .leader-role {
+            color: var(--accent-blue);
             font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .leader-bio {
+            font-size: 0.92rem;
             color: #64748b;
             line-height: 1.6;
         }
-        .leader-socials {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-            justify-content: center;
-        }
-        .patron-card .leader-socials {
-            justify-content: flex-start;
-        }
-        .leader-socials a {
-            color: #94a3b8;
-            transition: color 0.3s ease;
-            font-size: 1.1rem;
-        }
-        .leader-socials a:hover {
-            color: var(--bu-blue-light);
-        }
-        .leader-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--bu-blue);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .hierarchy-connector {
-            width: 2px;
-            height: 50px;
-            background: linear-gradient(to bottom, var(--bu-blue), transparent);
-            margin: 0 auto;
-        }
-        .leader-grid {
+
+        /* Success Story Grid System */
+        .success-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 30px;
-            width: 100%;
-            margin-top: 50px;
+            margin-bottom: 100px;
         }
-        .regional-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            width: 100%;
-            margin-top: 20px;
-        }
-        .regional-card {
+
+        .story-card {
             background: white;
-            padding: 20px;
-            border-radius: 15px;
-            border: 1px dashed var(--bu-blue-light);
-            text-align: center;
+            border-radius: 20px;
+            padding: 35px;
+            border: 1px solid #f1f5f9;
+            position: relative;
             transition: all 0.3s ease;
         }
-        .regional-card:hover {
-            background: var(--light-blue);
-            border-style: solid;
+
+        .story-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 12px 30px rgba(26, 58, 138, 0.08);
         }
-        .reg-icon {
-            font-size: 1.5rem;
-            color: var(--bu-blue);
-            margin-bottom: 10px;
+
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
         }
-        .regional-card h4 {
-            margin: 0;
-            font-size: 1rem;
-            color: var(--bu-blue);
+
+        .story-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--accent-blue);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
         }
-        .regional-card p {
-            margin: 5px 0 0;
-            font-size: 0.85rem;
+
+        .story-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #f8fafc;
             color: #64748b;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        /* Chapter Section Refinement */
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 80px;
         }
 
-        .tier-patron { animation: fadeInUp 0.8s ease-out; }
-        .tier-executive { animation: fadeInUp 1s ease-out; }
-        .tier-regional { animation: fadeInUp 1.2s ease-out; }
+        .chapter-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
+        .chapter-card:hover {
+            background: white;
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .chapter-icon {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .chapter-card h4 {
+            color: var(--text-primary);
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin: 0 0 5px;
+        }
+
+        .chapter-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .chapter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <style>
         .leader-card:hover .leader-image i {
             animation: float 2s ease-in-out infinite;
         }
 
         @media (max-width: 900px) {
-            .leader-grid, .regional-grid {
+
+            .leader-grid,
+            .regional-grid {
                 grid-template-columns: 1fr;
                 justify-items: center;
                 gap: 50px;
             }
+
             .patron-card {
                 flex-direction: column;
                 text-align: center;
                 margin-top: 60px;
             }
+
             .patron-card .leader-image {
                 margin: -60px auto 20px;
             }
+
             .patron-card .leader-socials {
                 justify-content: center;
             }
+
             .leader-card {
                 margin-top: 40px;
             }
+
             .hierarchy-connector {
                 height: 30px;
             }
+        }
+    </style>
+    <style>
+        .section-heading {
+            padding-bottom: 0 !important;
+        }
+
+        .section-heading::after {
+            display: none !important;
         }
     </style>
 </head>
@@ -273,176 +273,184 @@
         </div>
     </nav>
 
-        <div class="news-ticker">
+    <div class="news-ticker">
         <div class="ticker-label">Breaking Updates</div>
         <div class="ticker-wrap">
             <div class="ticker-move">
-                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now officially OPEN!</span>
-                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now fully Operational.</span>
-                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for the 2026 Dean's List!</span>
-                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud Computing" - Friday 10:00 AM.</span>
-                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation for the 2026 Region Awards.</span>
+                <span class="ticker-item"><i class="fas fa-bullhorn"></i> Registration for 2026 Academic Year is now
+                    officially OPEN!</span>
+                <span class="ticker-item"><i class="fas fa-microchip"></i> New Advanced Artificial Intelligence Lab now
+                    fully Operational.</span>
+                <span class="ticker-item"><i class="fas fa-graduation-cap"></i> Congratulations to our 50 candidates for
+                    the 2026 Dean's List!</span>
+                <span class="ticker-item"><i class="fas fa-calendar-check"></i> Guest Lecture: "The Future of Cloud
+                    Computing" - Friday 10:00 AM.</span>
+                <span class="ticker-item"><i class="fas fa-university"></i> Bugema University ranked #1 in Innovation
+                    for the 2026 Region Awards.</span>
             </div>
         </div>
     </div>
-<header class="page-hero">
+    <header class="page-hero">
         <h1>Our Alumni</h1>
         <p>Discover the success stories of our graduates who are making waves in the tech industry globally.</p>
     </header>
 
     <div class="container">
-        <!-- Alumni Leadership Hierarchy Section -->
-        <section class="leadership-section">
-            <h2 class="section-heading" style="text-align: center; margin-bottom: 60px;">Alumni Leadership Hierarchy</h2>
-            
-            <!-- Tier 1: Patron -->
-            <div class="hierarchy-tier tier-patron">
-                <div class="leader-card patron-card">
-                    <div class="leader-image">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <div class="leader-info">
-                        <h3>Prof. Paul Katende</h3>
-                        <p class="title">Grand Patron & Vice Chancellor</p>
-                        <p class="desc">Providing visionary guidance and connecting our alumni network to the university's core mission.</p>
-                        <div class="leader-socials">
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
+        <!-- Alumni Leadership Board -->
+        <section style="margin-top: 60px;">
+            <h2 class="section-heading"
+                style="text-align: center; color: var(--text-primary); margin-bottom: 60px; font-weight: 900;">
+                Departmental Alumni Board</h2>
+
+            <div class="leadership-board">
+                <!-- Patron -->
+                <div class="board-card">
+                    <div class="leader-avatar"><i class="fas fa-crown"></i></div>
+                    <div class="leader-name">Prof. Paul Katende</div>
+                    <div class="leader-role">Grand Patron</div>
+                    <p class="leader-bio">Guiding the association with visionary leadership and university-wide
+                        integration.</p>
                 </div>
-            </div>
 
-            <!-- Tier 2: Executive Council -->
-            <div class="hierarchy-connector"></div>
-            <div class="hierarchy-tier tier-executive">
-                <div class="leader-grid">
-                    <div class="leader-card exec-card">
-                        <div class="leader-badge">President</div>
-                        <div class="leader-image">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Dr. Samuel Kisekka</h3>
-                            <p class="title">BSc CS '15 | Founder, TechSavvy UG</p>
-                            <div class="leader-socials">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card exec-card">
-                        <div class="leader-badge">Vice President</div>
-                        <div class="leader-image">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Sarah Namusoke</h3>
-                            <p class="title">BIT '17 | HR Manager, Airtel</p>
-                            <div class="leader-socials">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fas fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="leader-card exec-card">
-                        <div class="leader-badge">Secretary</div>
-                        <div class="leader-image">
-                            <i class="fas fa-user-edit"></i>
-                        </div>
-                        <div class="leader-info">
-                            <h3>Musa Baligeya</h3>
-                            <p class="title">BSc CS '19 | DevOps Engineer</p>
-                            <div class="leader-socials">
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                <!-- President -->
+                <div class="board-card">
+                    <div class="leader-avatar"><i class="fas fa-user-tie"></i></div>
+                    <div class="leader-name">Dr. Samuel Kisekka</div>
+                    <div class="leader-role">President</div>
+                    <p class="leader-bio">BSc CS '15. Championing alumni engagement and industrial partnerships.</p>
                 </div>
-            </div>
 
-            <!-- Tier 3: Regional Coordinators -->
-            <div class="hierarchy-connector"></div>
-            <div class="hierarchy-tier tier-regional">
-                <h3 style="text-align: center; color: var(--bu-blue); margin-bottom: 30px; font-size: 1.2rem; opacity: 0.8;">Regional Chapter Coordinators</h3>
-                <div class="regional-grid">
-                    <div class="regional-card">
-                        <div class="reg-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <h4>Kampala Central</h4>
-                        <p>Janet Lunkuse</p>
-                    </div>
-                    <div class="regional-card">
-                        <div class="reg-icon"><i class="fas fa-globe-africa"></i></div>
-                        <h4>East Africa Chapter</h4>
-                        <p>Robert Omondi</p>
-                    </div>
-                    <div class="regional-card">
-                        <div class="reg-icon"><i class="fas fa-globe-americas"></i></div>
-                        <h4>International Diaspora</h4>
-                        <p>Patience Kigozi</p>
-                    </div>
+                <!-- Vice President -->
+                <div class="board-card">
+                    <div class="leader-avatar"><i class="fas fa-user-graduate"></i></div>
+                    <div class="leader-name">Sarah Namusoke</div>
+                    <div class="leader-role">Vice President</div>
+                    <p class="leader-bio">BIT '17. Overseeing professional development and mentorship programs.</p>
+                </div>
+
+                <!-- Secretary -->
+                <div class="board-card">
+                    <div class="leader-avatar"><i class="fas fa-user-edit"></i></div>
+                    <div class="leader-name">Musa Baligeya</div>
+                    <div class="leader-role">Secretary</div>
+                    <p class="leader-bio">BSc CS '19. Leading project coordination and internal network growth.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Success Stories Section -->
-        <section class="success-stories" style="margin-top: 100px;">
-            <h2 class="section-heading">Distinguished Success Stories</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 120px;">
-                
-                <div class="alumni-card">
-                    <div class="alumni-header">
-                        <div class="alumni-icon" style="color: var(--bu-blue); background: rgba(26, 58, 138, 0.1);"><i class="fas fa-user-graduate"></i></div>
+        <!-- Regional Chapters Section -->
+        <section style="margin-top: 40px;">
+            <h3
+                style="text-align: center; color: var(--text-primary); margin-bottom: 30px; font-size: 1.3rem; font-weight: 800; opacity: 0.8;">
+                Global Alumni Chapters</h3>
+            <div class="chapter-grid">
+                <div class="chapter-card">
+                    <i class="fas fa-location-dot chapter-icon"></i>
+                    <h4>Kampala Central</h4>
+                    <p>Janet Lunkuse</p>
+                </div>
+                <div class="chapter-card">
+                    <i class="fas fa-globe-africa chapter-icon"></i>
+                    <h4>East Africa Chapter</h4>
+                    <p>Robert Omondi</p>
+                </div>
+                <div class="chapter-card">
+                    <i class="fas fa-globe-americas chapter-icon"></i>
+                    <h4>International Diaspora</h4>
+                    <p>Patience Kigozi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Grid -->
+        <section style="margin-top: 40px;">
+            <h2 class="section-heading"
+                style="text-align: center; color: var(--text-primary); margin-bottom: 60px; font-weight: 900;">
+                Distinguished Success Stories</h2>
+
+            <div class="success-grid">
+                <!-- Story 1 -->
+                <div class="story-card">
+                    <div class="story-badge">Class of 2020</div>
+                    <div class="story-header">
+                        <div class="story-icon"><i class="fas fa-rocket"></i></div>
                         <div>
-                            <h3 style="margin: 0; color: var(--bu-blue); font-size:1.4rem;">Patience Kigozi</h3>
-                            <p style="margin: 0; color: #555; font-weight: bold; font-size:0.95rem;">Software Engineer at Microsoft</p>
+                            <h3 style="margin: 0; color: var(--text-primary); font-size: 1.3rem; font-weight: 800;">
+                                Patience Kigozi</h3>
+                            <p style="margin: 0; color: var(--accent-blue); font-weight: 700; font-size: 0.9rem;">
+                                Microsoft Engineer</p>
                         </div>
                     </div>
-                    <p><strong>Graduated:</strong> Class of 2020 (BSc Computer Science)</p>
-                    <p><strong>Journey:</strong> Patience started her journey at Bugema University with a passion for coding. After graduation, she contributed to several open-source projects before joining Microsoft's Azure Platform team.</p>
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--bu-blue); text-decoration:none;"><i class="fab fa-linkedin"></i> View Professional Profile</a></p>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+                        Patience transitioned from a top-tier student at Bugema to an Azure Platform engineer at
+                        Microsoft, contributing to global cloud infrastructure.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-blue); text-decoration: none; font-weight: 800; font-size: 0.9rem;">LinkedIn
+                        Profile &rarr;</a>
                 </div>
 
-                <div class="alumni-card" style="border-top-color: var(--accent-blue);">
-                    <div class="alumni-header">
-                        <div class="alumni-icon" style="color: var(--accent-blue); background: rgba(0, 150, 214, 0.1);"><i class="fas fa-user-tie"></i></div>
+                <!-- Story 2 -->
+                <div class="story-card">
+                    <div class="story-badge">Class of 2018</div>
+                    <div class="story-header">
+                        <div class="story-icon"><i class="fas fa-shield-alt"></i></div>
                         <div>
-                            <h3 style="margin: 0; color: var(--bu-blue); font-size:1.4rem;">Jane Lunkuse</h3>
-                            <p style="margin: 0; color: #555; font-weight: bold; font-size:0.95rem;">Cybersecurity Analyst at MTN Uganda</p>
+                            <h3 style="margin: 0; color: var(--text-primary); font-size: 1.3rem; font-weight: 800;">Jane
+                                Lunkuse</h3>
+                            <p style="margin: 0; color: var(--accent-blue); font-weight: 700; font-size: 0.9rem;">MTN
+                                Cyber Analyst</p>
                         </div>
                     </div>
-                    <p><strong>Graduated:</strong> Class of 2018 (BSc Information Technology)</p>
-                    <p><strong>Journey:</strong> Jane specialized in network security during her final year. She now oversees enterprise security infrastructure at MTN, protecting millions of users.</p>
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--bu-blue); text-decoration:none;"><i class="fab fa-linkedin"></i> View Professional Profile</a></p>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+                        Overseeing enterprise security for millions, Jane ensures the integrity of financial and
+                        communication networks at MTN Uganda.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-blue); text-decoration: none; font-weight: 800; font-size: 0.9rem;">LinkedIn
+                        Profile &rarr;</a>
                 </div>
 
-                <div class="alumni-card" style="border-top-color: var(--bu-blue-light);">
-                    <div class="alumni-header">
-                        <div class="alumni-icon" style="color: var(--bu-blue-light); background: rgba(74, 144, 226, 0.1);"><i class="fas fa-laptop-code"></i></div>
+                <!-- Story 3 -->
+                <div class="story-card">
+                    <div class="story-badge">Class of 2016</div>
+                    <div class="story-header">
+                        <div class="story-icon"><i class="fas fa-database"></i></div>
                         <div>
-                            <h3 style="margin: 0; color: var(--bu-blue); font-size:1.4rem;">Robert Omondi</h3>
-                            <p style="margin: 0; color: #555; font-weight: bold; font-size:0.95rem;">Senior Data Architect, Safaricom</p>
+                            <h3 style="margin: 0; color: var(--text-primary); font-size: 1.3rem; font-weight: 800;">
+                                Robert Omondi</h3>
+                            <p style="margin: 0; color: var(--accent-blue); font-weight: 700; font-size: 0.9rem;">Senior
+                                Data Architect</p>
                         </div>
                     </div>
-                    <p><strong>Graduated:</strong> Class of 2016 (BSc Information Systems)</p>
-                    <p><strong>Journey:</strong> Robert's expertise in big data has made ihn a key asset in Safaricom's fintech division. He manages large-scale data systems for mobile banking services.</p>
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--bu-blue); text-decoration:none;"><i class="fab fa-linkedin"></i> View Professional Profile</a></p>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+                        Managing Safaricom's massive fintech data banks, Robert's work supports the engine of mobile
+                        commerce in East Africa.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-blue); text-decoration: none; font-weight: 800; font-size: 0.9rem;">LinkedIn
+                        Profile &rarr;</a>
                 </div>
 
-                <div class="alumni-card" style="border-top-color: #f59e0b;">
-                    <div class="alumni-header">
-                        <div class="alumni-icon" style="color: #f59e0b; background: rgba(245, 158, 11, 0.1);"><i class="fas fa-database"></i></div>
+                <!-- Story 4 -->
+                <div class="story-card">
+                    <div class="story-badge">Class of 2021</div>
+                    <div class="story-header">
+                        <div class="story-icon"><i class="fas fa-globe"></i></div>
                         <div>
-                            <h3 style="margin: 0; color: var(--bu-blue); font-size:1.4rem;">Grace Nakato</h3>
-                            <p style="margin: 0; color: #555; font-weight: bold; font-size:0.95rem;">Data Scientist at United Nations</p>
+                            <h3 style="margin: 0; color: var(--text-primary); font-size: 1.3rem; font-weight: 800;">
+                                Grace Nakato</h3>
+                            <p style="margin: 0; color: var(--accent-blue); font-weight: 700; font-size: 0.9rem;">UN
+                                Data Scientist</p>
                         </div>
                     </div>
-                    <p><strong>Graduated:</strong> Class of 2021 (BSc Computer Science)</p>
-                    <p><strong>Journey:</strong> Grace's research project on predictive analytics caught the eye of UN recruiters. She now works with a global team using data for humanitarian efforts.</p>
-                    <p style="margin-top: 15px;"><a href="#" style="color: var(--bu-blue); text-decoration:none;"><i class="fab fa-linkedin"></i> View Professional Profile</a></p>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">
+                        Grace uses big data for humanitarian impact, working with UN teams to solve resource
+                        distribution challenges globally.
+                    </p>
+                    <a href="#"
+                        style="color: var(--accent-blue); text-decoration: none; font-weight: 800; font-size: 0.9rem;">LinkedIn
+                        Profile &rarr;</a>
                 </div>
             </div>
         </section>
@@ -454,12 +462,16 @@
             <div>
                 <div class="footer-brand" style="display: flex; align-items: center; margin-bottom: 25px;">
                     <div>
-                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA</h3>
-                        <p style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">University</p>
+                        <h3 style="margin: 0; font-size: 1.1rem; letter-spacing: 1px; color: var(--bu-blue);">BUGEMA
+                        </h3>
+                        <p
+                            style="margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.7); font-weight: bold; text-transform: uppercase;">
+                            University</p>
                     </div>
                 </div>
                 <p style="font-size: 0.92rem; line-height: 1.8; opacity: 0.6; margin-bottom: 20px;">
-                    Excellence in Service. Empowering the next generation of tech leaders through quality computing education and Christian values.
+                    Excellence in Service. Empowering the next generation of tech leaders through quality computing
+                    education and Christian values.
                 </p>
             </div>
             <div>
@@ -470,6 +482,7 @@
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="#contact">Contact & Support</a></li>
                     <li><a href="registrationForm.html">Register Online</a></li>
+                    <li><a href="admissionform.html">Apply for Admission</a></li>
                 </ul>
             </div>
             <div>
@@ -484,14 +497,15 @@
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
                 <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"
+                        title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i
+                            class="fas fa-envelope"></i></a>
+                    <a href="https://www.google.com/maps/place/Bugema+University" target="_blank"
+                        class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
-                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official channels for real-time updates on campus events and IT workshops.</p>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
+                    channels for real-time updates on campus events and IT workshops.</p>
             </div>
         </div>
         <div class="footer-bottom">

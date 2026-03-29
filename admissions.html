@@ -68,48 +68,43 @@
 
     <div class="container">
         <div
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 120px;">
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 80px;">
             <div class="value-card" style="text-align: left; border-top-color: var(--bu-blue);">
-                <h3 style="border-bottom: 2px solid var(--bu-blue); padding-bottom: 10px; margin-bottom: 20px;">
-                    <i class="fas fa-clipboard-check" style="margin-right:10px;"></i>Admission Criteria
+                <h3 style="color: var(--text-primary); border-bottom: 2px solid var(--bu-blue); padding-bottom: 12px; margin-bottom: 20px; font-weight: 800; font-size: 1.5rem;">
+                    <i class="fas fa-clipboard-check" style="margin-right:10px; color: var(--accent-blue);"></i>Admission Criteria
                 </h3>
-                <p><strong>Undergraduates:</strong> Must possess a minimum of two principal passes at A-level in
+                <p><strong style="color: var(--bu-blue);">Undergraduates:</strong> Must possess a minimum of two principal passes at A-level in
                     relevant subjects, and a minimum of 5 passes at O-level.</p>
-                <p><strong>Postgraduates:</strong> Should possess a recognized Bachelor's degree with at least a second
+                <p><strong style="color: var(--bu-blue);">Postgraduates:</strong> Should possess a recognized Bachelor's degree with at least a second
                     class lower division.</p>
-                <p style="color: blue; font-weight:bold; margin-top: 15px;"><i class="fas fa-clock"
-                        style="margin-right: 6px;"></i>Next Intake Deadline: August 15, 2026</p>
+                
+                <div style="background: var(--bu-accent-soft); border-left: 4px solid var(--accent-blue); padding: 15px; border-radius: 8px; margin-top: 25px;">
+                    <p style="color: var(--accent-blue); font-weight: 800; margin: 0; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-calendar-alt"></i> Next Intake Deadline: August 15, 2026
+                    </p>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem; color: #475569;">Limited slots available. We recommend early application.</p>
+                </div>
             </div>
 
             <div class="value-card" style="text-align: center; border-top-color: var(--accent-blue);">
-                <h3 style="border-bottom: 2px solid var(--accent-blue); padding-bottom: 10px; margin-bottom: 20px;">
-                    <i class="fas fa-laptop-code" style="margin-right:10px;"></i>Student Tools
+                <h3 style="color: var(--text-primary); border-bottom: 2px solid var(--accent-blue); padding-bottom: 12px; margin-bottom: 20px; font-weight: 800; font-size: 1.5rem;">
+                    <i class="fas fa-laptop-code" style="margin-right:10px; color: var(--accent-blue);"></i>Student Tools
                 </h3>
                 <div style="display:flex; flex-direction:column; gap:15px; margin-top:20px;">
                     <a href="admissionform.html"
-                        style="background: var(--bu-blue); color:white; padding:14px; border-radius:10px; text-decoration:none; font-weight:bold; transition: all 0.3s ease;"
-                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(26,58,138,0.3)'"
-                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                        style="background: var(--accent-blue); color:white; padding:16px; border-radius:10px; text-decoration:none; font-weight:800; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(37, 99, 235, 0.15);"
+                        onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(37,99,235,0.25)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(37,99,235,0.15)'">
                         <i class="fas fa-file-alt" style="margin-right: 8px;"></i>Online Application Portal
                     </a>
                     <a href="registrationForm.html"
-                        style="background: var(--accent-blue); color:white; padding:14px; border-radius:10px; text-decoration:none; font-weight:bold; transition: all 0.3s ease;"
-                        onmouseover="this.style.transform='translateY(-2px)'"
-                        onmouseout="this.style.transform='translateY(0)'">
+                        style="background: var(--bu-blue-light); color:white; padding:16px; border-radius:10px; text-decoration:none; font-weight:800; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(59, 130, 246, 0.1);"
+                        onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(59,130,246,0.2)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(59,130,246,0.1)'">
                         <i class="fas fa-book" style="margin-right: 8px;"></i>Course Registration System
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div class="official-link">
-            <i class="fas fa-external-link-alt"
-                style="font-size: 1.5rem; color: var(--bu-blue); margin-bottom: 15px;"></i>
-            <br>
-            <a href="#contact">
-                For more information, contact us
-                <i class="fas fa-arrow-right"></i>
-            </a>
         </div>
     </div>
 
@@ -151,13 +146,9 @@
             </div>
             <div>
                 <h4 class="footer-heading" id="contact">Stay Connected</h4>
-                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
-                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp"><i
-                            class="fab fa-whatsapp"></i></a>
+                                <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                    <a href="https://wa.me/256709749084" target="_blank" class="social-icon whatsapp" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:info@bugemauniv.ac.ug" class="social-icon email" title="Email Us"><i class="fas fa-envelope"></i></a>
                     <a href="https://www.google.com/maps/place/Bugema+University" target="_blank" class="social-icon location" title="Our Location"><i class="fas fa-map-marker-alt"></i></a>
                 </div>
                 <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6;">Follow our official
