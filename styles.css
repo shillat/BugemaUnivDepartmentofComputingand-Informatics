@@ -798,18 +798,14 @@ nav.scrolled .dropdown-btn {
 .page-hero {
     margin-top: 0;
     background: url('image.png');
-    /* Uniformly use high-quality image */
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 180px 20px 80px;
+    padding: 160px 20px 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -1295,7 +1291,8 @@ nav.scrolled .dropdown-btn {
     }
 
     .page-hero {
-        padding: 100px 15px 50px;
+        padding: 160px 15px 60px;
+        min-height: 70vh;
     }
 
     .page-hero h1 {
@@ -1514,7 +1511,8 @@ nav.scrolled .dropdown-btn {
 
     /* Page Hero */
     .page-hero {
-        padding: 80px 12px 40px;
+        padding: 120px 12px 50px;
+        min-height: 60vh;
     }
 
     .page-hero h1 {
